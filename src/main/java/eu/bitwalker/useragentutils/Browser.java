@@ -261,8 +261,8 @@ public enum Browser {
 		this.name = name;
 		this.parent = parent;
 		this.children = new ArrayList<Browser>();
-		this.aliases = toLowerCase(aliases);
-		this.excludeList = toLowerCase(exclude);
+		this.aliases = StringUtils.toLowerCase(aliases);
+		this.excludeList = StringUtils.toLowerCase(exclude);
 		this.browserType = browserType;
 		this.manufacturer = manufacturer;
 		this.renderingEngine = renderingEngine;
@@ -273,16 +273,6 @@ public enum Browser {
 		else 
 			this.parent.children.add(this);
 	}
-
-  private static String[] toLowerCase(String[] strArr) {
-    if (strArr == null) return null;
-    String[] res = new String[strArr.length];
-    for (int i=0; i<strArr.length; i++) {
-      res[i] = strArr[i].toLowerCase();
-    }
-    return res;
-  }
-
 
 	// create collection of top level browsers during initialization
 	private static void addTopLevelBrowser(Browser browser) {
@@ -369,7 +359,7 @@ public enum Browser {
 	{
     if (agentString == null) return false;
 
-    String agentStringLowerCase = agentString.toLowerCase();
+    String agentStringLowerCase = StringUtils.toLowerCaseAscii(agentString);
 		for (String alias : aliases)
 		{
       if (agentStringLowerCase.contains(alias))
@@ -386,14 +376,12 @@ public enum Browser {
 	 */
 	private boolean containsExcludeToken(String agentString)
 	{
-    if (agentString == null) return false;
+    if (agentString == null || excludeList == null) return false;
 
-		if (excludeList != null) {
-      String agentStringLowerCase = agentString.toLowerCase();
-      for (String exclude : excludeList) {
-        if (agentStringLowerCase.contains(exclude))
-					return true;
-			}
+		String agentStringLowerCase = StringUtils.toLowerCaseAscii(agentString);
+		for (String exclude : excludeList) {
+        	if (agentStringLowerCase.contains(exclude))
+				return true;
 		}
 		return false;
 	}

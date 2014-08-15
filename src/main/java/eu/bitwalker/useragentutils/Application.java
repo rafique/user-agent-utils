@@ -88,7 +88,7 @@ public enum Application {
 			String[] aliases, ApplicationType applicationType) {
 		this.id = (short) ((manufacturer.getId() << 8) + (byte) versionId);
 		this.name = name;
-		this.aliases = aliases;
+		this.aliases = StringUtils.toLowerCase(aliases);
 		this.applicationType = applicationType;
 		this.manufacturer = manufacturer;
 	}
@@ -120,8 +120,11 @@ public enum Application {
 	 * checks for one specific application.
 	 */
 	public boolean isInReferrerString(String referrerString) {
+		if (referrerString == null)
+			return false;
+		referrerString = StringUtils.toLowerCaseAscii(referrerString);
 		for (String alias : aliases) {
-			if (referrerString.toLowerCase().indexOf(alias.toLowerCase()) != -1)
+			if (referrerString.indexOf(alias) != -1)
 				return true;
 		}
 		return false;
