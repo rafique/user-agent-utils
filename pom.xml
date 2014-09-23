@@ -8,7 +8,7 @@
 	<name>User-Agent-Utils</name>
 	<url>http://java.net/projects/user-agent-utils</url>
 	<artifactId>UserAgentUtils</artifactId>
-	<version>1.14-snapshot</version>
+	<version>1.14.2-snapshot</version>
 	<description>Utility classes to handle user-agents.</description>
 	<properties>
     	<github.global.server>github</github.global.server>
@@ -25,7 +25,7 @@
 	<developers>
 		<developer>
 			<id>haraldwalker</id>
-			<name>Harald Walker</name>
+			<name>Harald Walker, KciNKh</name>
 			<url>http://www.bitwalker.eu</url>
 			<roles>
 				<role>developer</role>
@@ -35,14 +35,14 @@
 	</developers>
 
     <issueManagement>
-        <url>https://github.com/HaraldWalker/user-agent-utils/issues</url>
+        <url>https://github.com/KciNKh/user-agent-utils/issues</url>
         <system>GitHub</system>
     </issueManagement>
 
 	<scm>
-        <url>https://github.com/HaraldWalker/user-agent-utils</url>
-        <connection>scm:git:git://github.com:HaraldWalker/user-agent-utils.git</connection>
-        <developerConnection>scm:git:git@github.com:HaraldWalker/user-agent-utils.git</developerConnection>
+        <url>https://github.com/KciNKh/user-agent-utils</url>
+        <connection>scm:git:git://github.com:KciNKh/user-agent-utils.git</connection>
+        <developerConnection>scm:git:git@github.com:KciNKh/user-agent-utils.git</developerConnection>
     </scm>
 
 	<distributionManagement>
@@ -78,7 +78,7 @@
 					</includes>
 					<merge>true</merge>
 					<repositoryName>user-agent-utils</repositoryName>      <!-- github repo name -->
-					<repositoryOwner>haraldwalker</repositoryOwner>        <!-- github username -->
+					<repositoryOwner>kcinkh</repositoryOwner>        <!-- github username -->
 				</configuration>
 				<executions>
 					<!-- run site-maven-plugin's 'site' target as part of the build's normal 

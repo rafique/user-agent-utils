@@ -7,13 +7,9 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import eu.bitwalker.useragentutils.Browser;
-import eu.bitwalker.useragentutils.OperatingSystem;
-import eu.bitwalker.useragentutils.UserAgent;
-
 /**
  * @author harald
- *
+ * 
  */
 public class UserAgentTest {
 
@@ -25,11 +21,35 @@ public class UserAgentTest {
 		UserAgent userAgent = UserAgent.parseUserAgentString("Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.2; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)");
 		assertEquals(OperatingSystem.WINDOWS_XP, userAgent.getOperatingSystem());
 		assertEquals(Browser.IE6, userAgent.getBrowser());
+
+		userAgent = UserAgent.parseUserAgentString("Mozilla/5.0 (Windows NT 6.1; Trident/7.0; rv:11.0) like Gecko");
+		assertEquals(OperatingSystem.WINDOWS_7, userAgent.getOperatingSystem());
+		assertEquals(Browser.IE11, userAgent.getBrowser());
+
+		userAgent = UserAgent
+				.parseUserAgentString("Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.11 Safari/537.36 OPR/21.0.1432.5 (Edition Developer)");
+		assertEquals(OperatingSystem.WINDOWS_XP, userAgent.getOperatingSystem());
+		assertEquals(Browser.OPERA21, userAgent.getBrowser());
+
+		userAgent = UserAgent
+				.parseUserAgentString("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.94 Safari/537.36 OPR/24.0.1558.51 (Edition Next)");
+		assertEquals(OperatingSystem.MAC_OS_X, userAgent.getOperatingSystem());
+		assertEquals(Browser.OPERA24, userAgent.getBrowser());
+
+		userAgent = UserAgent
+				.parseUserAgentString("Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.36");
+		assertEquals(OperatingSystem.WINDOWS_7, userAgent.getOperatingSystem());
+		assertEquals(Browser.CHROME37, userAgent.getBrowser());
+
+		userAgent = UserAgent
+				.parseUserAgentString("Mozilla/5.0 (Windows NT 6.1; WOW64; rv:32.0) Gecko/20100101 Firefox/32.0");
+		assertEquals(OperatingSystem.WINDOWS_7, userAgent.getOperatingSystem());
+		assertEquals(Browser.FIREFOX32, userAgent.getBrowser());
 	}
-	
+
 	/**
-	 * Test method for {@link eu.bitwalker.useragentutils.UserAgent#parseUserAgentString(java.lang.String)} 
-	 * that checks for proper handling of a <code>null</code> userAgentString.
+	 * Test method for {@link eu.bitwalker.useragentutils.UserAgent#parseUserAgentString(java.lang.String)} that checks for proper handling of a <code>null</code>
+	 * userAgentString.
 	 */
 	@Test
 	public void testParseUserAgentStringNull() {
@@ -67,5 +87,5 @@ public class UserAgentTest {
 		UserAgent retrievedUserAgent = UserAgent.valueOf(userAgent.toString());
 		assertEquals(userAgent, retrievedUserAgent);
 	}
-	
+
 }
