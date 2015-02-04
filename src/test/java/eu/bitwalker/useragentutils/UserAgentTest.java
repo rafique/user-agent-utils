@@ -37,14 +37,44 @@ public class UserAgentTest {
 		assertEquals(Browser.OPERA24, userAgent.getBrowser());
 
 		userAgent = UserAgent
+				.parseUserAgentString("Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.3 Safari/537.36 OPR/28.0.1750.5");
+		assertEquals(OperatingSystem.WINDOWS_7, userAgent.getOperatingSystem());
+		assertEquals(Browser.OPERA28, userAgent.getBrowser());
+
+		userAgent = UserAgent
 				.parseUserAgentString("Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.36");
 		assertEquals(OperatingSystem.WINDOWS_7, userAgent.getOperatingSystem());
 		assertEquals(Browser.CHROME37, userAgent.getBrowser());
 
 		userAgent = UserAgent
+				.parseUserAgentString("Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36");
+		assertEquals(OperatingSystem.WINDOWS_7, userAgent.getOperatingSystem());
+		assertEquals(Browser.CHROME39, userAgent.getBrowser());
+
+		userAgent = UserAgent
+				.parseUserAgentString("Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.94 Safari/537.36");
+		assertEquals(OperatingSystem.WINDOWS_7, userAgent.getOperatingSystem());
+		assertEquals(Browser.CHROME40, userAgent.getBrowser());
+
+		userAgent = UserAgent
+				.parseUserAgentString("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.75.14 (KHTML, like Gecko) Version/7.0.3 Safari/7046A194A");
+		assertEquals(OperatingSystem.MAC_OS_X, userAgent.getOperatingSystem());
+		assertEquals(Browser.SAFARI7, userAgent.getBrowser());
+
+		userAgent = UserAgent
+				.parseUserAgentString("Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Safari/600.1.4");
+		assertEquals(OperatingSystem.MAC_OS_X_IPHONE, userAgent.getOperatingSystem());
+		assertEquals(Browser.SAFARI8, userAgent.getBrowser());
+
+		userAgent = UserAgent
 				.parseUserAgentString("Mozilla/5.0 (Windows NT 6.1; WOW64; rv:32.0) Gecko/20100101 Firefox/32.0");
 		assertEquals(OperatingSystem.WINDOWS_7, userAgent.getOperatingSystem());
 		assertEquals(Browser.FIREFOX32, userAgent.getBrowser());
+
+		userAgent = UserAgent
+				.parseUserAgentString("Mozilla/5.0 (Windows NT 6.1; WOW64; rv:35.0) Gecko/20100101 Firefox/35.0");
+		assertEquals(OperatingSystem.WINDOWS_7, userAgent.getOperatingSystem());
+		assertEquals(Browser.FIREFOX35, userAgent.getBrowser());
 	}
 
 	/**
