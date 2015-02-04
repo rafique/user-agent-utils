@@ -279,7 +279,7 @@ public enum Browser {
 	private static List<Browser> topLevelBrowsers;
 	
 	private Browser(Manufacturer manufacturer, Browser parent, int versionId, String name, String[] aliases, String[] exclude, BrowserType browserType, RenderingEngine renderingEngine, String versionRegexString) {
-		this.id =  (short) ( ( manufacturer.getId() << 8) + (byte) versionId);
+		this.id =  (short) ( ( manufacturer.getId() << 9) + (short) versionId);
 		this.name = name;
 		this.parent = parent;
 		this.children = new ArrayList<Browser>();

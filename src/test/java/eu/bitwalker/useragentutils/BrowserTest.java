@@ -39,9 +39,9 @@ package eu.bitwalker.useragentutils;
 
 import static org.junit.Assert.*;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.junit.Test;
 
@@ -665,11 +665,11 @@ public class BrowserTest {
 	@Test
 	public void testUniqueIdValues() {
 
-		List<Short> retrievedIdValues = new ArrayList<Short>();
+		Map<Short, Browser> retrievedIdValues = new HashMap<Short, Browser>();
 
 		for (Browser browser : Browser.values()) {
-			assertTrue(browser.toString(), !retrievedIdValues.contains(browser.getId()));
-			retrievedIdValues.add(browser.getId());
+			assertTrue(browser.toString() + "==" + retrievedIdValues.get(browser.getId()), !retrievedIdValues.containsKey(browser.getId()));
+			retrievedIdValues.put(browser.getId(), browser);
 		}
 	}
 
