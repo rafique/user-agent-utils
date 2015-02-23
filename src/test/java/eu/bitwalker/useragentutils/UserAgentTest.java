@@ -66,9 +66,9 @@ public class UserAgentTest {
 		assertEquals(OperatingSystem.WINDOWS_7, userAgent.getOperatingSystem());
 		assertEquals(Browser.FIREFOX32, userAgent.getBrowser());
 
-		userAgent = UserAgent.parseUserAgentString("Mozilla/5.0 (Windows NT 6.1; WOW64; rv:35.0) Gecko/20100101 Firefox/35.0");
-		assertEquals(OperatingSystem.WINDOWS_7, userAgent.getOperatingSystem());
-		assertEquals(Browser.FIREFOX40, userAgent.getBrowser());
+		userAgent = UserAgent.parseUserAgentString("Mozilla/5.0 (Windows NT 6.3; rv:36.0) Gecko/20100101 Firefox/36.0");
+		assertEquals(OperatingSystem.WINDOWS_81, userAgent.getOperatingSystem());
+		assertEquals(Browser.FIREFOX36, userAgent.getBrowser());
 	}
 
 	/**

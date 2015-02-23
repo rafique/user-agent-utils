@@ -275,6 +275,10 @@ public class BrowserTest {
 			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:28.0) Gecko/20100101 Firefox/28.0"
 	};
 
+	String[] firefox36 = new String[] {
+			"Mozilla/5.0 (Windows NT 6.3; rv:36.0) Gecko/20100101 Firefox/36.0"
+	};
+
 	String[] firefox3mobile = {
 			"Mozilla/5.0 (X11; U; Linux armv7l; en-US; rv:1.9.2a1pre) Gecko/20091127 Firefox/3.5 Maemo Browser 1.5.6 RX-51 N900"
 	};
@@ -590,6 +594,8 @@ public class BrowserTest {
 		testAgents(firefox19, Browser.FIREFOX19);
 		testAgents(firefox20, Browser.FIREFOX20);
 		testAgents(firefox25, Browser.FIREFOX25);
+		testAgents(firefox28, Browser.FIREFOX28);
+		testAgents(firefox36, Browser.FIREFOX36);
 		testAgents(firefox3mobile, Browser.FIREFOX3MOBILE);
 		testAgents(firefoxMobile, Browser.FIREFOX_MOBILE);
 		testAgents(firefoxMobile23, Browser.FIREFOX_MOBILE23);

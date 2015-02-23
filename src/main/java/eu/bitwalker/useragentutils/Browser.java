@@ -191,11 +191,11 @@ public enum Browser {
 	FIREFOX3MOBILE(Manufacturer.MOZILLA, Browser.FIREFOX, 31, "Firefox 3 Mobile", new String[] { "Firefox/3.5 Maemo" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.GECKO, null), // using Gecko Engine
 	FIREFOX_MOBILE(Manufacturer.MOZILLA, Browser.FIREFOX, 200, "Firefox Mobile", new String[] { "Mobile" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.GECKO, null), // using Gecko Engine
 	FIREFOX_MOBILE23(Manufacturer.MOZILLA, FIREFOX_MOBILE, 223, "Firefox Mobile 23", new String[] { "Firefox/23" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.GECKO, null), // using Gecko Engine
-	FIREFOX40(Manufacturer.MOZILLA, Browser.FIREFOX, 400, "Firefox 40", new String[] { "Firefox/35" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null), // using Gecko Engine
-	FIREFOX39(Manufacturer.MOZILLA, Browser.FIREFOX, 390, "Firefox 39", new String[] { "Firefox/35" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null), // using Gecko Engine
-	FIREFOX38(Manufacturer.MOZILLA, Browser.FIREFOX, 380, "Firefox 38", new String[] { "Firefox/35" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null), // using Gecko Engine
-	FIREFOX37(Manufacturer.MOZILLA, Browser.FIREFOX, 370, "Firefox 37", new String[] { "Firefox/35" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null), // using Gecko Engine
-	FIREFOX36(Manufacturer.MOZILLA, Browser.FIREFOX, 360, "Firefox 36", new String[] { "Firefox/35" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null), // using Gecko Engine
+	FIREFOX40(Manufacturer.MOZILLA, Browser.FIREFOX, 400, "Firefox 40", new String[] { "Firefox/40" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null), // using Gecko Engine
+	FIREFOX39(Manufacturer.MOZILLA, Browser.FIREFOX, 390, "Firefox 39", new String[] { "Firefox/39" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null), // using Gecko Engine
+	FIREFOX38(Manufacturer.MOZILLA, Browser.FIREFOX, 380, "Firefox 38", new String[] { "Firefox/38" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null), // using Gecko Engine
+	FIREFOX37(Manufacturer.MOZILLA, Browser.FIREFOX, 370, "Firefox 37", new String[] { "Firefox/37" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null), // using Gecko Engine
+	FIREFOX36(Manufacturer.MOZILLA, Browser.FIREFOX, 360, "Firefox 36", new String[] { "Firefox/36" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null), // using Gecko Engine
 	FIREFOX35(Manufacturer.MOZILLA, Browser.FIREFOX, 350, "Firefox 35", new String[] { "Firefox/35" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null), // using Gecko Engine
 	FIREFOX34(Manufacturer.MOZILLA, Browser.FIREFOX, 340, "Firefox 34", new String[] { "Firefox/34" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null), // using Gecko Engine
 	FIREFOX33(Manufacturer.MOZILLA, Browser.FIREFOX, 330, "Firefox 33", new String[] { "Firefox/33" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null), // using Gecko Engine
