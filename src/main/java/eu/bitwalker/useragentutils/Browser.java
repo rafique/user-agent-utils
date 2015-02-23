@@ -139,7 +139,7 @@ public enum Browser {
 	SAFARI8(Manufacturer.APPLE, Browser.SAFARI, 8, "Safari 8", new String[] { "Version/8" }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null), // before AppleWebKit
 	SAFARI7(Manufacturer.APPLE, Browser.SAFARI, 7, "Safari 7", new String[] { "Version/7" }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null), // before AppleWebKit
 	SAFARI6(Manufacturer.APPLE, Browser.SAFARI, 6, "Safari 6", new String[] { "Version/6" }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null), // before AppleWebKit
-	SAFARI5(Manufacturer.APPLE, Browser.SAFARI, 3, "Safari 5", new String[] { "Version/5" }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null), // before AppleWebKit
+	SAFARI5(Manufacturer.APPLE, Browser.SAFARI, 5, "Safari 5", new String[] { "Version/5" }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null), // before AppleWebKit
 	SAFARI4(Manufacturer.APPLE, Browser.SAFARI, 4, "Safari 4", new String[] { "Version/4" }, new String[] { "Googlebot-Mobile" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null), // before AppleWebKit
 
 	/**
@@ -164,8 +164,8 @@ public enum Browser {
 	OPERA17(Manufacturer.OPERA, Browser.OPERA, 17, "Opera 17", new String[] { "OPR/17." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
 	OPERA16(Manufacturer.OPERA, Browser.OPERA, 16, "Opera 16", new String[] { "OPR/16." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
 	OPERA15(Manufacturer.OPERA, Browser.OPERA, 15, "Opera 15", new String[] { "OPR/15." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
-	OPERA12(Manufacturer.OPERA, Browser.OPERA, 12, "Opera 12", new String[] { "Opera/12", "Version/12." }, null, BrowserType.WEB_BROWSER, RenderingEngine.PRESTO, "Version\\/(([\\d]+)\\.([\\w]+))"),
-	OPERA11(Manufacturer.OPERA, Browser.OPERA, 11, "Opera 11", new String[] { "Version/11." }, null, BrowserType.WEB_BROWSER, RenderingEngine.PRESTO, "Version\\/(([\\d]+)\\.([\\w]+))"),
+	OPERA12(Manufacturer.OPERA, Browser.OPERA, 12, "Opera 12", new String[] { "Opera/12", "Opera 12.", "Version/12." }, null, BrowserType.WEB_BROWSER, RenderingEngine.PRESTO, "Version\\/(([\\d]+)\\.([\\w]+))"),
+	OPERA11(Manufacturer.OPERA, Browser.OPERA, 11, "Opera 11", new String[] { "Opera/11", "Opera 11.", "Version/11." }, null, BrowserType.WEB_BROWSER, RenderingEngine.PRESTO, "Version\\/(([\\d]+)\\.([\\w]+))"),
 	OPERA10(Manufacturer.OPERA, Browser.OPERA, 10, "Opera 10", new String[] { "Opera/9.8" }, null, BrowserType.WEB_BROWSER, RenderingEngine.PRESTO, "Version\\/(([\\d]+)\\.([\\w]+))"),
 	OPERA9(Manufacturer.OPERA, Browser.OPERA, 5, "Opera 9", new String[] { "Opera/9" }, null, BrowserType.WEB_BROWSER, RenderingEngine.PRESTO, null),
 	KONQUEROR(Manufacturer.OTHER, null, 1, "Konqueror", new String[] { "Konqueror" }, null, BrowserType.WEB_BROWSER, RenderingEngine.KHTML, "Konqueror\\/(([0-9]+)\\.?([\\w]+)?(-[\\w]+)?)"),
