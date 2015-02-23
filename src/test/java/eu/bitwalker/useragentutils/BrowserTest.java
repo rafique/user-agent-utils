@@ -61,7 +61,10 @@ public class BrowserTest {
 			"Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)",
 			"Mozilla/4.0 (compatible; MSIE 7.0b; Windows NT 6.0 ; .NET CLR 2.0.50215; SL Commerce Client v1.0; Tablet PC 2.0",
 			"Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)",
-			"Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0; SLCC1; .NET CLR 2.0.50727; .NET CLR 3.0.04506)" // Windows Mail on Vista
+			"Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0; SLCC1; .NET CLR 2.0.50727; .NET CLR 3.0.04506)" // Windows
+																																																					// Mail
+																																																					// on
+																																																					// Vista
 	};
 
 	String[] ie8clients = new String[] {
@@ -82,7 +85,8 @@ public class BrowserTest {
 
 	String[] ie11clients = new String[] {
 			"Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko",
-			"Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; ASU2JS; rv:11.0) like Gecko", // 64bit Win8
+			"Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; ASU2JS; rv:11.0) like Gecko", // 64bit
+																																											// Win8
 	};
 
 	String[] ie55clients = new String[] {
@@ -229,6 +233,10 @@ public class BrowserTest {
 			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.107 Safari/537.36"
 	};
 
+	String[] chrome36 = new String[] {
+			"	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.143 Safari/537.36"
+	};
+
 	String[] chrome33 = new String[] {
 			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.117 Safari/537.36"
 	};
@@ -288,6 +296,14 @@ public class BrowserTest {
 			"Mozilla/5.0 (Macintosh; U; Intel Mac OS X; en-gb) AppleWebKit/523.10.6 (KHTML, like Gecko) Version/3.0.4 Safari/523.10.6"
 	};
 
+	String[] safari8 = {
+			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10) AppleWebKit/600.1.25 (KHTML, like Gecko) Version/8.0 Safari/600.1.25"
+	};
+
+	String[] safari7 = {
+			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9) AppleWebKit/537.71 (KHTML, like Gecko) Version/7.0 Safari/537.71"
+	};
+
 	String[] safari6 = {
 			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
 	};
@@ -310,7 +326,9 @@ public class BrowserTest {
 			"Mozilla/5.0 (iPod; U; CPU iPhone OS 2_0 like Mac OS X; de-de) AppleWebKit/525.18.1 (KHTML, like Gecko) Version/3.1.1 Mobile/5A347 Safari/525.20", // Mobile
 																																																																													// Safari
 																																																																													// 3.1.1
-			"Mozilla/5.0 (iPod; U; CPU like Mac OS X; en) AppleWebKit/420.1 (KHTML, like Gecko) Version/3.0 Mobile/3A101a Safari/419.3", // Mobile Safari 3.0
+			"Mozilla/5.0 (iPod; U; CPU like Mac OS X; en) AppleWebKit/420.1 (KHTML, like Gecko) Version/3.0 Mobile/3A101a Safari/419.3", // Mobile
+																																																																		// Safari
+																																																																		// 3.0
 			"Mozilla/5.0 (iPad; U; CPU OS 3_2 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Version/4.0.4 Mobile/7B367 Safari/531.21.10",
 			"Mozilla/5.0 (iPod; U; CPU iPhone OS 4_1 like Mac OS X; en-us) AppleWebKit/532.9 (KHTML, like Gecko) Version/4.0.5 Mobile/8B117 Safari/6531.22.7",
 			"Mozilla/5.0 (iPhone; CPU iPhone OS 5_0 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3",
@@ -387,9 +405,22 @@ public class BrowserTest {
 			"Mozilla/5.0 (Windows NT 6.3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.46 Safari/537.36 OPR/20.0.1387.16 (Edition Developer)"
 	};
 
+	String[] opera23 = {
+			"Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.125 Safari/537.36 OPR/23.0.1522.60"
+	};
+
+	String[] opera24 = {
+			"	Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.94 Safari/537.36 OPR/24.0.1558.51 (Edition Next)"
+	};
+
 	String[] operaMini = {
 			"Opera/9.60 (J2ME/MIDP; Opera Mini/4.2.13337/458; U; en) Presto/2.2.0",
 			"Opera/9.80 (J2ME/MIDP; Opera Mini/5.0.16823/1428; U; en) Presto/2.2.0"
+	};
+
+	String[] operaCoast = {
+			"Mozilla/5.0 (iPad; CPU OS 6_1_3 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Coast/1.0.2.62956 Mobile/10B329 Safari/7534.48.3 ",
+			"Mozilla/5.0 (iPad; CPU OS 7_0_2 like Mac OS X) AppleWebKit/537.51.1 (KHTML like Gecko) Coast/1.1.2.64598 Mobile/11B511 Safari/7534.48.3"
 	};
 
 	String[] camino2 = {
@@ -461,11 +492,15 @@ public class BrowserTest {
 
 	// proxy server with fake browser reference
 	String[] proxy = {
-			"Mozilla/5.0 (Windows; U; Windows NT 5.1; de; rv:1.9.0.7) Gecko/2009021910 Firefox/3.0.7 (via ggpht.com)" // Gmail proxy server
+			"Mozilla/5.0 (Windows; U; Windows NT 5.1; de; rv:1.9.0.7) Gecko/2009021910 Firefox/3.0.7 (via ggpht.com)" // Gmail
+																																																								// proxy
+																																																								// server
 	};
 
 	/**
-	 * Test method for {@link eu.bitwalker.useragentutils.Browser#isInUserAgentString(java.lang.String)}.
+	 * Test method for
+	 * {@link eu.bitwalker.useragentutils.Browser#isInUserAgentString(java.lang.String)}
+	 * .
 	 */
 	@Test
 	public void testIsBrowser() {
@@ -505,7 +540,12 @@ public class BrowserTest {
 		testVersions(
 				"Mozilla/5.0 (SymbianOS/9.2; U; Series60/3.1 NokiaE90-1/07.24.0.3; Profile/MIDP-2.0 Configuration/CLDC-1.1 ) AppleWebKit/413 (KHTML, like Gecko) Safari/413 UP.Link/6.2.3.18.0",
 				null);
-		testVersions("Mozilla/5.0 (compatible; Googlebot/2.1; http://www.google.com/bot.html)", null); // no version information for some browsers
+		testVersions("Mozilla/5.0 (compatible; Googlebot/2.1; http://www.google.com/bot.html)", null); // no
+																																																		// version
+																																																		// information
+																																																		// for
+																																																		// some
+																																																		// browsers
 		testVersions("Mozilla/5.0 (Linux; U; Android-4.0.3; en-us; Xoom Build/IML77) AppleWebKit/535.7 (KHTML, like Gecko) CrMo/16.0.912.75 Safari/535.7",
 				new Version("16.0.912.75", "16", "0"));
 		testVersions(
@@ -529,6 +569,10 @@ public class BrowserTest {
 		testVersions("Mozilla/5.0 (Linux; Android 4.1.2; LT22i Build/6.2.A.1.100) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.59 Mobile Safari/537.36",
 				new Version("31.0.1650.59", "31", "0"));
 		testVersions("Windows-RSS-Platform/2.0 (IE 11.0; Windows NT 6.1)", new Version("11.0", "11", "0"));
+		testVersions("Mozilla/5.0 (iPad; CPU OS 7_0_3 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Coast/1.1.3.65998 Mobile/11B511 Safari/7534.48.3",
+				new Version("1.1.3.65998", "1", "1"));
+		testVersions("Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.125 Safari/537.36 OPR/23.0.1522.60", new Version(
+				"23.0.1522.60", "23", "0"));
 	}
 
 	private void testVersions(String ua, Version expectedVersion) {
@@ -537,7 +581,9 @@ public class BrowserTest {
 	}
 
 	/**
-	 * Test method for {@link eu.bitwalker.useragentutils.Browser#parseUserAgentString(java.lang.String)}.
+	 * Test method for
+	 * {@link eu.bitwalker.useragentutils.Browser#parseUserAgentString(java.lang.String)}
+	 * .
 	 */
 	@Test
 	public void testParseUserAgentString() {
@@ -577,6 +623,7 @@ public class BrowserTest {
 		testAgents(chrome29, Browser.CHROME29);
 		testAgents(chrome32, Browser.CHROME32);
 		testAgents(chrome33, Browser.CHROME33);
+		testAgents(chrome36, Browser.CHROME36);
 		testAgents(chrome39, Browser.CHROME39);
 		testAgents(firefox3, Browser.FIREFOX3);
 		testAgents(firefox4, Browser.FIREFOX4);
@@ -590,6 +637,8 @@ public class BrowserTest {
 		testAgents(firefoxMobile23, Browser.FIREFOX_MOBILE23);
 		testAgents(safari, Browser.SAFARI);
 		testAgents(dolfin, Browser.DOLFIN2);
+		testAgents(safari8, Browser.SAFARI8);
+		testAgents(safari7, Browser.SAFARI7);
 		testAgents(safari6, Browser.SAFARI6);
 		testAgents(safari5, Browser.SAFARI5);
 		testAgents(safari4, Browser.SAFARI4);
@@ -608,6 +657,9 @@ public class BrowserTest {
 		testAgents(opera18, Browser.OPERA18);
 		testAgents(opera19, Browser.OPERA19);
 		testAgents(opera20, Browser.OPERA20);
+		testAgents(opera23, Browser.OPERA23);
+		testAgents(opera24, Browser.OPERA24);
+		testAgents(operaCoast, Browser.COAST1);
 		testAgents(camino2, Browser.CAMINO2);
 		testAgents(camino, Browser.CAMINO);
 		testAgents(flock, Browser.FLOCK);
@@ -627,7 +679,8 @@ public class BrowserTest {
 
 	@Test
 	public void testCustomUserAgentParsing() {
-		// Test limited to the big browser families. As Camino can not be detected any longer, the second best match is Firefox3 (a child of Firefox).
+		// Test limited to the big browser families. As Camino can not be detected
+		// any longer, the second best match is Firefox3 (a child of Firefox).
 		for (String agentString : camino2) {
 			assertEquals(Browser.FIREFOX3,
 					Browser.parseUserAgentString(agentString, Arrays.asList(Browser.IE, Browser.CHROME, Browser.APPLE_WEB_KIT, Browser.FIREFOX)));

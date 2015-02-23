@@ -63,7 +63,7 @@ public class UserAgentTest {
 
 		userAgent = UserAgent
 				.parseUserAgentString("Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Safari/600.1.4");
-		assertEquals(OperatingSystem.MAC_OS_X_IPHONE, userAgent.getOperatingSystem());
+		assertEquals(OperatingSystem.iOS8_IPHONE, userAgent.getOperatingSystem());
 		assertEquals(Browser.SAFARI8, userAgent.getBrowser());
 
 		userAgent = UserAgent
@@ -74,7 +74,7 @@ public class UserAgentTest {
 		userAgent = UserAgent
 				.parseUserAgentString("Mozilla/5.0 (Windows NT 6.1; WOW64; rv:35.0) Gecko/20100101 Firefox/35.0");
 		assertEquals(OperatingSystem.WINDOWS_7, userAgent.getOperatingSystem());
-		assertEquals(Browser.FIREFOX35, userAgent.getBrowser());
+		assertEquals(Browser.FIREFOX40, userAgent.getBrowser());
 	}
 
 	/**
