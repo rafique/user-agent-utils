@@ -69,6 +69,22 @@ public class UserAgentTest {
 		userAgent = UserAgent.parseUserAgentString("Mozilla/5.0 (Windows NT 6.3; rv:36.0) Gecko/20100101 Firefox/36.0");
 		assertEquals(OperatingSystem.WINDOWS_81, userAgent.getOperatingSystem());
 		assertEquals(Browser.FIREFOX36, userAgent.getBrowser());
+
+		userAgent = UserAgent.parseUserAgentString("Mozilla/5.0 (Linux; U; Android 2.3.3; en-us; HTC_DesireS_S510e Build/GRI40) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile");
+		assertEquals(OperatingSystem.ANDROID2, userAgent.getOperatingSystem());
+		assertEquals(Browser.ANDROID_WEB_KIT, userAgent.getBrowser());
+
+		userAgent = UserAgent.parseUserAgentString("Mozilla/5.0 (Linux; U; Android 2.2.1; en-gb; HTC_DesireZ_A7272 Build/FRG83D) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1");
+		assertEquals(OperatingSystem.ANDROID2, userAgent.getOperatingSystem());
+		assertEquals(Browser.ANDROID_WEB_KIT, userAgent.getBrowser());
+
+		userAgent = UserAgent.parseUserAgentString("Mozilla/5.0 (Linux; U; Android 4.0.3; de-ch; HTC Sensation Build/IML74K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30");
+		assertEquals(OperatingSystem.ANDROID4, userAgent.getOperatingSystem());
+		assertEquals(Browser.ANDROID_WEB_KIT, userAgent.getBrowser());
+
+		userAgent = UserAgent.parseUserAgentString("Mozilla/5.0 (Linux; U; Android 4.0.3; de-ch; HTC Sensation Build/IML74K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30");
+		assertEquals(OperatingSystem.ANDROID4_TABLET, userAgent.getOperatingSystem());
+		assertEquals(Browser.ANDROID_WEB_KIT, userAgent.getBrowser());
 	}
 
 	/**

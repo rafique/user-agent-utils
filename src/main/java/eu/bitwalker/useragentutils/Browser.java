@@ -76,16 +76,18 @@ public enum Browser {
 	/**
 	 * Since 2007 the mobile edition of Internet Explorer identifies itself as IEMobile in the user-agent. If previous versions have to be detected, use the operating system information as well.
 	 */
-	IEMOBILE11(Manufacturer.MICROSOFT, Browser.IE, 125, "IE Mobile 11", new String[] { "IEMobile/11" }, new String[] { "Opera" }, BrowserType.MOBILE_BROWSER, RenderingEngine.TRIDENT, null), // before MSIE strings
-	IEMOBILE10(Manufacturer.MICROSOFT, Browser.IE, 124, "IE Mobile 10", new String[] { "IEMobile/10" }, new String[] { "Opera" }, BrowserType.MOBILE_BROWSER, RenderingEngine.TRIDENT, null), // before MSIE strings
-	IEMOBILE9(Manufacturer.MICROSOFT, Browser.IE, 123, "IE Mobile 9", new String[] { "IEMobile/9" }, new String[] { "Opera" }, BrowserType.MOBILE_BROWSER, RenderingEngine.TRIDENT, null), // before MSIE strings
-	IEMOBILE7(Manufacturer.MICROSOFT, Browser.IE, 121, "IE Mobile 7", new String[] { "IEMobile 7" }, new String[] { "Opera" }, BrowserType.MOBILE_BROWSER, RenderingEngine.TRIDENT, null), // before MSIE strings
-	IEMOBILE6(Manufacturer.MICROSOFT, Browser.IE, 120, "IE Mobile 6", new String[] { "IEMobile 6" }, new String[] { "Opera" }, BrowserType.MOBILE_BROWSER, RenderingEngine.TRIDENT, null), // before MSIE
-	IE11(Manufacturer.MICROSOFT, Browser.IE, 95, "Internet Explorer 11", new String[] { "Trident/7", "IE 11." }, new String[] { "MSIE 7", "Opera" }, BrowserType.WEB_BROWSER, RenderingEngine.TRIDENT, "(?:Trident\\/7|IE)(?:\\.[0-9]*;)?(?:.*rv:| )(([0-9]+)\\.?([0-9]+))"), // before Mozilla
-	IE10(Manufacturer.MICROSOFT, Browser.IE, 92, "Internet Explorer 10", new String[] { "MSIE 10" }, new String[] { "Opera" }, BrowserType.WEB_BROWSER, RenderingEngine.TRIDENT, null), // before MSIE
+	IEMOBILE(Manufacturer.MICROSOFT, Browser.IE, 119, "IE Mobile", new String[] { "IEMobile" }, new String[] { "Opera" }, BrowserType.MOBILE_BROWSER, RenderingEngine.TRIDENT, "IEMobile[\\s/](([\\d]+)\\.([\\w]+))"), // before MSIE
+	IEMOBILE11(Manufacturer.MICROSOFT, Browser.IEMOBILE, 125, "IE Mobile 11", new String[] { "IEMobile/11" }, new String[] { "Opera" }, BrowserType.MOBILE_BROWSER, RenderingEngine.TRIDENT, "IEMobile[\\s/](([\\d]+)\\.([\\w]+))"), // before MSIE strings
+	IEMOBILE10(Manufacturer.MICROSOFT, Browser.IEMOBILE, 124, "IE Mobile 10", new String[] { "IEMobile/10" }, new String[] { "Opera" }, BrowserType.MOBILE_BROWSER, RenderingEngine.TRIDENT, "IEMobile[\\s/](([\\d]+)\\.([\\w]+))"), // before MSIE strings
+	IEMOBILE9(Manufacturer.MICROSOFT, Browser.IEMOBILE, 123, "IE Mobile 9", new String[] { "IEMobile/9" }, new String[] { "Opera" }, BrowserType.MOBILE_BROWSER, RenderingEngine.TRIDENT, "IEMobile[\\s/](([\\d]+)\\.([\\w]+))"), // before MSIE strings
+	IEMOBILE8(Manufacturer.MICROSOFT, Browser.IEMOBILE, 122, "IE Mobile 8", new String[] { "IEMobile 8", "IEMobile/8" }, new String[] { "Opera" }, BrowserType.MOBILE_BROWSER, RenderingEngine.TRIDENT, "IEMobile[\\s/](([\\d]+)\\.([\\w]+))"), // before MSIE strings
+	IEMOBILE7(Manufacturer.MICROSOFT, Browser.IEMOBILE, 121, "IE Mobile 7", new String[] { "IEMobile 7", "IEMobile/7" }, new String[] { "Opera" }, BrowserType.MOBILE_BROWSER, RenderingEngine.TRIDENT, "IEMobile[\\s/](([\\d]+)\\.([\\w]+))"), // before MSIE strings
+	IEMOBILE6(Manufacturer.MICROSOFT, Browser.IEMOBILE, 120, "IE Mobile 6", new String[] { "IEMobile 6" }, new String[] { "Opera" }, BrowserType.MOBILE_BROWSER, RenderingEngine.TRIDENT, "IEMobile[\\s/](([\\d]+)\\.([\\w]+))"), // before MSIE
+	IE11(Manufacturer.MICROSOFT, Browser.IE, 95, "Internet Explorer 11", new String[] { "Trident/7", "IE 11." }, new String[] { "Opera" }, BrowserType.WEB_BROWSER, RenderingEngine.TRIDENT, "(?:Trident\\/7|IE)(?:\\.[0-9]*;)?(?:.*rv:| )(([0-9]+)\\.?([0-9]+))"), // before Mozilla
+	IE10(Manufacturer.MICROSOFT, Browser.IE, 92, "Internet Explorer 10", new String[] { "Trident/6", "MSIE 10" }, new String[] { "Opera" }, BrowserType.WEB_BROWSER, RenderingEngine.TRIDENT, null), // before MSIE
 	IE9(Manufacturer.MICROSOFT, Browser.IE, 90, "Internet Explorer 9", new String[] { "MSIE 9" }, new String[] { "Opera" }, BrowserType.WEB_BROWSER, RenderingEngine.TRIDENT, null), // before MSIE
-	IE8(Manufacturer.MICROSOFT, Browser.IE, 80, "Internet Explorer 8", new String[] { "MSIE 8" }, new String[] { "Opera" }, BrowserType.WEB_BROWSER, RenderingEngine.TRIDENT, null), // before MSIE
-	IE7(Manufacturer.MICROSOFT, Browser.IE, 70, "Internet Explorer 7", new String[] { "MSIE 7" }, new String[] { "Opera" }, BrowserType.WEB_BROWSER, RenderingEngine.TRIDENT, null), // before MSIE
+	IE8(Manufacturer.MICROSOFT, Browser.IE, 80, "Internet Explorer 8", new String[] { "MSIE 8", "OptimizedIE8" }, new String[] { "Trident/6", "Opera" }, BrowserType.WEB_BROWSER, RenderingEngine.TRIDENT, null), // before MSIE
+	IE7(Manufacturer.MICROSOFT, Browser.IE, 70, "Internet Explorer 7", new String[] { "MSIE 7" }, new String[] { "OptimizedIE8", "Opera" }, BrowserType.WEB_BROWSER, RenderingEngine.TRIDENT, null), // before MSIE
 	IE6(Manufacturer.MICROSOFT, Browser.IE, 60, "Internet Explorer 6", new String[] { "MSIE 6" }, new String[] { "Opera" }, BrowserType.WEB_BROWSER, RenderingEngine.TRIDENT, null), // before MSIE
 	IE5_5(Manufacturer.MICROSOFT, Browser.IE, 55, "Internet Explorer 5.5", new String[] { "MSIE 5.5" }, new String[] { "Opera" }, BrowserType.WEB_BROWSER, RenderingEngine.TRIDENT, null), // before MSIE
 	IE5(Manufacturer.MICROSOFT, Browser.IE, 50, "Internet Explorer 5", new String[] { "MSIE 5" }, new String[] { "Opera" }, BrowserType.WEB_BROWSER, RenderingEngine.TRIDENT, null), // before MSIE
@@ -94,7 +96,8 @@ public enum Browser {
 	 * Google Chrome browser
 	 */
 	CHROME(Manufacturer.GOOGLE, null, 1, "Chrome", new String[] { "Chrome", "CrMo", "CriOS" }, new String[] { "OPR/", "Web Preview" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "Chrome\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"), // before Mozilla
-	CHROME_MOBILE(Manufacturer.GOOGLE, Browser.CHROME, 100, "Chrome Mobile", new String[] { "CrMo", "CriOS", "Mobile Safari" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, "(?:CriOS|CrMo|Chrome)\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
+	ANDROID_WEB_KIT(Manufacturer.GOOGLE, null, 2, "Android Webkit Browser", new String[] { "Android", "Build/" }, new String[] { "Windows", "Firefox", "Chrome", "Opera", "OPR/", "Web Preview", "Googlebot-Mobile" }, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, "Version\\/(([\\d]+)\\.([\\w]+))"), // Android WebKit also only identifies itself as AppleWebKit
+	CHROME_MOBILE(Manufacturer.GOOGLE, Browser.CHROME, 100, "Chrome Mobile", new String[] { "CrMo", "CriOS", "Mobile Safari" }, new String[] { "OPR/", "Web Preview" }, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, "(?:CriOS|CrMo|Chrome)\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
 	CHROME41(Manufacturer.GOOGLE, Browser.CHROME, 46, "Chrome 41", new String[] { "Chrome/41" }, new String[] { "OPR/", "Web Preview" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null), // before Mozilla
 	CHROME40(Manufacturer.GOOGLE, Browser.CHROME, 45, "Chrome 40", new String[] { "Chrome/40" }, new String[] { "OPR/", "Web Preview" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null), // before Mozilla
 	CHROME39(Manufacturer.GOOGLE, Browser.CHROME, 44, "Chrome 39", new String[] { "Chrome/39" }, new String[] { "OPR/", "Web Preview" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null), // before Mozilla
@@ -132,15 +135,19 @@ public enum Browser {
 
 	OMNIWEB(Manufacturer.OTHER, null, 2, "Omniweb", new String[] { "OmniWeb" }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null), //
 
-	SAFARI(Manufacturer.APPLE, null, 1, "Safari", new String[] { "Safari" }, new String[] { "OPR/", "Coast/", "Web Preview", "Googlebot-Mobile" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "Version\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?)"), // before AppleWebKit
+	SAFARI(Manufacturer.APPLE, null, 1, "Safari", new String[] { "Safari" }, new String[] { "OPR/", "Coast/", "Web Preview", "Googlebot-Mobile", "Android" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "Version\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?)"), // before AppleWebKit
 	BLACKBERRY10(Manufacturer.BLACKBERRY, Browser.SAFARI, 10, "BlackBerry", new String[] { "BB10" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, null),
-	MOBILE_SAFARI(Manufacturer.APPLE, Browser.SAFARI, 2, "Mobile Safari", new String[] { "Mobile Safari", "Mobile/" }, new String[] { "Coast/", "Googlebot-Mobile" }, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, null), // before Safari
+	MOBILE_SAFARI(Manufacturer.APPLE, Browser.SAFARI, 2, "Mobile Safari", new String[] { "Mobile Safari", "Mobile/" }, new String[] { "Coast/", "Googlebot-Mobile", "Build/" }, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, null), // before Safari
+	MOBILE_SAFARI7(Manufacturer.APPLE, Browser.MOBILE_SAFARI, 107, "Mobile Safari 7", new String[] { "Mobile/11" }, new String[] { "Coast/", "Googlebot-Mobile", "Build/" }, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, null), // before Safari
+	MOBILE_SAFARI6(Manufacturer.APPLE, Browser.MOBILE_SAFARI, 106, "Mobile Safari 6", new String[] { "Mobile/10" }, new String[] { "Coast/", "Googlebot-Mobile", "Build/" }, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, null), // before Safari
+	MOBILE_SAFARI5(Manufacturer.APPLE, Browser.MOBILE_SAFARI, 105, "Mobile Safari 5", new String[] { "Mobile/9" }, new String[] { "Coast/", "Googlebot-Mobile", "Build/" }, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, null), // before Safari
+	MOBILE_SAFARI4(Manufacturer.APPLE, Browser.MOBILE_SAFARI, 104, "Mobile Safari 4", new String[] { "Mobile/8", "Mobile/7", "Mobile Safari/" }, new String[] { "Coast/", "Googlebot-Mobile", "Build/" }, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, null), // before Safari
 	SILK(Manufacturer.AMAZON, Browser.SAFARI, 15, "Silk", new String[] { "Silk/" }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "Silk\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?(\\-[\\w]+)?)"), // http://en.wikipedia.org/wiki/Amazon_Silk
-	SAFARI8(Manufacturer.APPLE, Browser.SAFARI, 8, "Safari 8", new String[] { "Version/8" }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null), // before AppleWebKit
-	SAFARI7(Manufacturer.APPLE, Browser.SAFARI, 7, "Safari 7", new String[] { "Version/7" }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null), // before AppleWebKit
-	SAFARI6(Manufacturer.APPLE, Browser.SAFARI, 6, "Safari 6", new String[] { "Version/6" }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null), // before AppleWebKit
-	SAFARI5(Manufacturer.APPLE, Browser.SAFARI, 5, "Safari 5", new String[] { "Version/5" }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null), // before AppleWebKit
-	SAFARI4(Manufacturer.APPLE, Browser.SAFARI, 4, "Safari 4", new String[] { "Version/4" }, new String[] { "Googlebot-Mobile" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null), // before AppleWebKit
+	SAFARI8(Manufacturer.APPLE, Browser.SAFARI, 8, "Safari 8", new String[] { "Version/8" }, new String[] { "Coast/", "Googlebot-Mobile", "Build/" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null), // before AppleWebKit
+	SAFARI7(Manufacturer.APPLE, Browser.SAFARI, 7, "Safari 7", new String[] { "Version/7" }, new String[] { "Coast/", "Googlebot-Mobile", "Build/" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null), // before AppleWebKit
+	SAFARI6(Manufacturer.APPLE, Browser.SAFARI, 6, "Safari 6", new String[] { "Version/6" }, new String[] { "Coast/", "Googlebot-Mobile", "Build/" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null), // before AppleWebKit
+	SAFARI5(Manufacturer.APPLE, Browser.SAFARI, 5, "Safari 5", new String[] { "Version/5" }, new String[] { "Coast/", "Googlebot-Mobile", "Build/" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null), // before AppleWebKit
+	SAFARI4(Manufacturer.APPLE, Browser.SAFARI, 4, "Safari 4", new String[] { "Version/4" }, new String[] { "Mobile/", "Googlebot-Mobile", "Build/" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null), // before AppleWebKit
 
 	/**
 	 * Opera Coast mobile browser, http://en.wikipedia.org/wiki/Opera_Coast
@@ -150,6 +157,7 @@ public enum Browser {
 
 	OPERA(Manufacturer.OPERA, null, 1, "Opera", new String[] { " OPR/", "Opera" }, null, BrowserType.WEB_BROWSER, RenderingEngine.PRESTO, "Opera\\/(([\\d]+)\\.([\\w]+))"), // before MSIE
 	OPERA_MINI(Manufacturer.OPERA, Browser.OPERA, 20, "Opera Mini", new String[] { "Opera Mini" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.PRESTO, null), // Opera for mobile devices
+	OPERA_MOBILE(Manufacturer.OPERA, Browser.OPERA, 2, "Opera Mobile", new String[] { "Opera Mobi" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.PRESTO, null), // Opera for mobile devices
 	OPERA28(Manufacturer.OPERA, Browser.OPERA, 29, "Opera 28", new String[] { "OPR/28." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
 	OPERA27(Manufacturer.OPERA, Browser.OPERA, 28, "Opera 27", new String[] { "OPR/27." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
 	OPERA26(Manufacturer.OPERA, Browser.OPERA, 27, "Opera 26", new String[] { "OPR/26." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
@@ -166,7 +174,7 @@ public enum Browser {
 	OPERA15(Manufacturer.OPERA, Browser.OPERA, 15, "Opera 15", new String[] { "OPR/15." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
 	OPERA12(Manufacturer.OPERA, Browser.OPERA, 12, "Opera 12", new String[] { "Opera/12", "Opera 12.", "Version/12." }, null, BrowserType.WEB_BROWSER, RenderingEngine.PRESTO, "Version\\/(([\\d]+)\\.([\\w]+))"),
 	OPERA11(Manufacturer.OPERA, Browser.OPERA, 11, "Opera 11", new String[] { "Opera/11", "Opera 11.", "Version/11." }, null, BrowserType.WEB_BROWSER, RenderingEngine.PRESTO, "Version\\/(([\\d]+)\\.([\\w]+))"),
-	OPERA10(Manufacturer.OPERA, Browser.OPERA, 10, "Opera 10", new String[] { "Opera/9.8" }, null, BrowserType.WEB_BROWSER, RenderingEngine.PRESTO, "Version\\/(([\\d]+)\\.([\\w]+))"),
+	OPERA10(Manufacturer.OPERA, Browser.OPERA, 10, "Opera 10", new String[] { "Opera/9.8" }, new String[] { "Version/11.", "Version/12." }, BrowserType.WEB_BROWSER, RenderingEngine.PRESTO, "Version\\/(([\\d]+)\\.([\\w]+))"),
 	OPERA9(Manufacturer.OPERA, Browser.OPERA, 5, "Opera 9", new String[] { "Opera/9" }, null, BrowserType.WEB_BROWSER, RenderingEngine.PRESTO, null),
 	KONQUEROR(Manufacturer.OTHER, null, 1, "Konqueror", new String[] { "Konqueror" }, null, BrowserType.WEB_BROWSER, RenderingEngine.KHTML, "Konqueror\\/(([0-9]+)\\.?([\\w]+)?(-[\\w]+)?)"),
 
@@ -175,7 +183,7 @@ public enum Browser {
 	/*
 	 * Apple WebKit compatible client. Can be a browser or an application with embedded browser using UIWebView.
 	 */
-	APPLE_WEB_KIT(Manufacturer.APPLE, null, 50, "Apple WebKit", new String[] { "AppleWebKit" }, new String[] { "OPR/", "Web Preview", "Googlebot-Mobile" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null), // Microsoft Entrourage/Outlook 2010 also only identifies itself as AppleWebKit
+	APPLE_WEB_KIT(Manufacturer.APPLE, null, 50, "Apple WebKit", new String[] { "AppleWebKit" }, new String[] { "OPR/", "Web Preview", "Googlebot-Mobile", "Android" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null), // Microsoft Entrourage/Outlook 2010 also only identifies itself as AppleWebKit
 	APPLE_ITUNES(Manufacturer.APPLE, Browser.APPLE_WEB_KIT, 52, "iTunes", new String[] { "iTunes" }, null, BrowserType.APP, RenderingEngine.WEBKIT, null), // Microsoft Entrourage/Outlook 2010 also only identifies itself as AppleWebKit
 	APPLE_APPSTORE(Manufacturer.APPLE, Browser.APPLE_WEB_KIT, 53, "App Store", new String[] { "MacAppStore" }, null, BrowserType.APP, RenderingEngine.WEBKIT, null), // Microsoft Entrourage/Outlook 2010 also only identifies itself as AppleWebKit
 	ADOBE_AIR(Manufacturer.ADOBE, Browser.APPLE_WEB_KIT, 1, "Adobe AIR application", new String[] { "AdobeAIR" }, null, BrowserType.APP, RenderingEngine.WEBKIT, null), // Microsoft Entrourage/Outlook 2010 also only identifies itself as AppleWebKit
@@ -189,8 +197,7 @@ public enum Browser {
 
 	FIREFOX(Manufacturer.MOZILLA, null, 10, "Firefox", new String[] { "Firefox" }, new String[] { "ggpht.com" }, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, "Firefox\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"), // using Gecko Engine
 	FIREFOX3MOBILE(Manufacturer.MOZILLA, Browser.FIREFOX, 31, "Firefox 3 Mobile", new String[] { "Firefox/3.5 Maemo" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.GECKO, null), // using Gecko Engine
-	FIREFOX_MOBILE(Manufacturer.MOZILLA, Browser.FIREFOX, 200, "Firefox Mobile", new String[] { "Mobile" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.GECKO, null), // using Gecko Engine
-	FIREFOX_MOBILE23(Manufacturer.MOZILLA, FIREFOX_MOBILE, 223, "Firefox Mobile 23", new String[] { "Firefox/23" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.GECKO, null), // using Gecko Engine
+	FIREFOX_MOBILE(Manufacturer.MOZILLA, Browser.FIREFOX, 200, "Firefox Mobile", new String[] { "Mobile", "Android" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.GECKO, null), // using Gecko Engine
 	FIREFOX40(Manufacturer.MOZILLA, Browser.FIREFOX, 400, "Firefox 40", new String[] { "Firefox/40" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null), // using Gecko Engine
 	FIREFOX39(Manufacturer.MOZILLA, Browser.FIREFOX, 390, "Firefox 39", new String[] { "Firefox/39" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null), // using Gecko Engine
 	FIREFOX38(Manufacturer.MOZILLA, Browser.FIREFOX, 380, "Firefox 38", new String[] { "Firefox/38" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null), // using Gecko Engine
@@ -272,6 +279,24 @@ public enum Browser {
 	@Deprecated
 	APPLE_MAIL(Manufacturer.APPLE, null, 51, "Apple Mail", new String[0], null, BrowserType.EMAIL_CLIENT, RenderingEngine.WEBKIT, null); // not detectable any longer.
 
+	private static final class TopLevelBrowsers {
+		private static final List<Browser> browsers = new ArrayList<Browser>();
+	}
+
+	static {
+		TopLevelBrowsers.browsers.add(CHROME_MOBILE);
+		// Bind Chrome versioned browsers with Chrome Mobile
+		for (Browser browser : Browser.values()) {
+			if (browser.parent == CHROME && browser != CHROME_MOBILE) {
+				addChildBrowser(CHROME_MOBILE, browser);
+			} else if (browser.parent == FIREFOX && browser != FIREFOX_MOBILE) {
+				addChildBrowser(FIREFOX_MOBILE, browser);
+			}
+		}
+		addChildBrowser(OPERA_MOBILE, OPERA10);
+		addChildBrowser(OPERA_MOBILE, OPERA11);
+		addChildBrowser(OPERA_MOBILE, OPERA12);
+	}
 	/*
 	 * An id for each browser version which is unique per manufacturer.
 	 */
@@ -285,7 +310,6 @@ public enum Browser {
 	private final Browser parent;
 	private List<Browser> children;
 	private Pattern versionRegEx;
-	private static List<Browser> topLevelBrowsers;
 
 	private Browser(Manufacturer manufacturer, Browser parent, int versionId, String name, String[] aliases, String[] exclude, BrowserType browserType, RenderingEngine renderingEngine, String versionRegexString) {
 		this.id = (short) ((manufacturer.getId() << 10) + (short) versionId);
@@ -303,16 +327,17 @@ public enum Browser {
 		if (this.parent == null) {
 			addTopLevelBrowser(this);
 		} else {
-			this.parent.children.add(this);
+			addChildBrowser(this.parent, this);
 		}
+	}
+
+	private static boolean addChildBrowser(Browser browser, Browser child) {
+		return browser.children.add(child);
 	}
 
 	// create collection of top level browsers during initialization
 	private static void addTopLevelBrowser(Browser browser) {
-		if (topLevelBrowsers == null) {
-			topLevelBrowsers = new ArrayList<Browser>();
-		}
-		topLevelBrowsers.add(browser);
+		TopLevelBrowsers.browsers.add(browser);
 	}
 
 	public short getId() {
@@ -423,8 +448,8 @@ public enum Browser {
 
 	private Browser checkUserAgent(String agentString) {
 		if (this.isInUserAgentString(agentString)) {
-
-			if (this.children.size() > 0) {
+			
+if (this.children.size() > 0) {
 				for (Browser childBrowser : this.children) {
 					Browser match = childBrowser.checkUserAgent(agentString);
 					if (match != null)
@@ -448,7 +473,7 @@ public enum Browser {
 	 */
 	public static Browser parseUserAgentString(String agentString)
 	{
-		return parseUserAgentString(agentString, topLevelBrowsers);
+		return parseUserAgentString(agentString, TopLevelBrowsers.browsers);
 	}
 
 	/**

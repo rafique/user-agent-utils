@@ -39,9 +39,19 @@ package eu.bitwalker.useragentutils;
 
 import static org.junit.Assert.*;
 
+import java.io.IOException;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.junit.Test;
 
@@ -180,8 +190,12 @@ public class BrowserTest {
 
 	String[] chromeMobile = new String[] {
 			"Mozilla/5.0 (Linux; U; Android-4.0.3; en-us; Xoom Build/IML77) AppleWebKit/535.7 (KHTML, like Gecko) CrMo/16.0.912.75 Safari/535.7",
+			"Mozilla/5.0 (iPhone; CPU iPhone OS 7_1 like Mac OS X) AppleWebKit/537.51.2 (KHTML, like Gecko) CriOS/40.0.2214.73 Mobile/11D167 Safari/9537.53",
 			"Mozilla/5.0 (Linux; U; Android-4.0.3; en-us; Galaxy Nexus Build/IML74K) AppleWebKit/535.7 (KHTML, like Gecko) CrMo/16.0.912.75 Mobile Safari/535.7",
-			"Mozilla/5.0 (iPhone; U; CPU iPhone OS 5_1_1 like Mac OS X; en) AppleWebKit/534.46.0 (KHTML, like Gecko) CriOS/19.0.1084.60 Mobile/9B206 Safari/7534.48.3",
+			"Mozilla/5.0 (iPhone; U; CPU iPhone OS 5_1_1 like Mac OS X; en) AppleWebKit/534.46.0 (KHTML, like Gecko) CriOS/19.0.1084.60 Mobile/9B206 Safari/7534.48.3"
+	};
+
+	String[] chromeMobile31 = new String[] {
 			"Mozilla/5.0 (Linux; Android 4.1.2; LT22i Build/6.2.A.1.100) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.59 Mobile Safari/537.36"
 	};
 
@@ -284,6 +298,10 @@ public class BrowserTest {
 	};
 
 	String[] firefoxMobile = {
+			"Mozilla/5.0 (Android; Mobile; rv:13.0) Gecko/13.0 Firefox/0.0"
+	};
+
+	String[] firefoxMobile13 = {
 			"Mozilla/5.0 (Android; Mobile; rv:13.0) Gecko/13.0 Firefox/13.0"
 	};
 
@@ -322,13 +340,22 @@ public class BrowserTest {
 	};
 
 	String[] mobileSafari = {
-			"Mozilla/5.0 (Linux; U; Android 2.1; en-us; Nexus One Build/ERD62) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17",
 			"Mozilla/5.0 (iPod; U; CPU iPhone OS 2_0 like Mac OS X; de-de) AppleWebKit/525.18.1 (KHTML, like Gecko) Version/3.1.1 Mobile/5A347 Safari/525.20", // Mobile Safari 3.1.1
-			"Mozilla/5.0 (iPod; U; CPU like Mac OS X; en) AppleWebKit/420.1 (KHTML, like Gecko) Version/3.0 Mobile/3A101a Safari/419.3", // Mobile Safari 3.0
+			"Mozilla/5.0 (iPod; U; CPU like Mac OS X; en) AppleWebKit/420.1 (KHTML, like Gecko) Version/3.0 Mobile/3A101a Safari/419.3" // Mobile Safari 3.0
+	};
+
+	String[] mobileSafari4 = {
 			"Mozilla/5.0 (iPad; U; CPU OS 3_2 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Version/4.0.4 Mobile/7B367 Safari/531.21.10",
-			"Mozilla/5.0 (iPod; U; CPU iPhone OS 4_1 like Mac OS X; en-us) AppleWebKit/532.9 (KHTML, like Gecko) Version/4.0.5 Mobile/8B117 Safari/6531.22.7",
+			"Mozilla/5.0 (iPod; U; CPU iPhone OS 4_1 like Mac OS X; en-us) AppleWebKit/532.9 (KHTML, like Gecko) Version/4.0.5 Mobile/8B117 Safari/6531.22.7"
+	};
+
+	String[] mobileSafari5 = {
 			"Mozilla/5.0 (iPhone; CPU iPhone OS 5_0 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3",
 			"Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3"
+	};
+
+	String[] mobileSafari6 = {
+			"Mozilla/5.0 (iPhone; CPU iPhone OS 6_1_4 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10B350 Safari/8536.25"
 	};
 
 	String[] dolfin = {
@@ -415,6 +442,23 @@ public class BrowserTest {
 			"Opera/9.80 (J2ME/MIDP; Opera Mini/9 (Compatible; MSIE:9.0; iPhone; BlackBerry9700; AppleWebKit/24.746; U; en) Presto/2.5.25 Version/10.54"
 	};
 
+	String[] operaMobi = {
+			"Opera (Android 2.2; Opera Mobi/-2118645896; U; pl) Presto/2.7.60 Version/13.1"
+	};
+	
+	String[] operaMobi10 = {
+			"Opera/9.80 (S60; SymbOS; Opera Mobi/498; U; sv) Presto/2.4.18 Version/10.00"
+	};
+	
+	String[] operaMobi11 = {
+			"Opera/9.80 (S60; SymbOS; Opera Mobi/SYB-1103211396; U; es-LA) Presto/2.7.81 Version/11.00",
+			"Opera/9.80 (Android 2.3.3; Linux; Opera Mobi/ADR-1111101157; U; es-ES) Presto/2.9.201 Version/11.50"
+	};
+	
+	String[] operaMobi12 = {
+			"Opera/12.02 (Android 4.1; Linux; Opera Mobi/ADR-1111101157; U; en-US) Presto/2.9.201 Version/12.02"
+	};
+
 	String[] operaCoast = {
 			"Mozilla/5.0 (iPad; CPU OS 6_1_3 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Coast/1.0.2.62956 Mobile/10B329 Safari/7534.48.3 ",
 			"Mozilla/5.0 (iPad; CPU OS 7_0_2 like Mac OS X) AppleWebKit/537.51.1 (KHTML like Gecko) Coast/1.1.2.64598 Mobile/11B511 Safari/7534.48.3"
@@ -485,6 +529,11 @@ public class BrowserTest {
 	String[] blackberry10 = {
 			"Mozilla/5.0 (BB10; Touch) AppleWebKit/537.1 (KHTML, like Gecko) Version/10.0.0.1337 Mobile Safari/537.1",
 			"Mozilla/5.0 (BB10; Kbd) AppleWebKit/537.10+ (KHTML, like Gecko) Version/10.1.0.1485 Mobile Safari/537.10+"
+	};
+
+	String[] androidWebKit = {
+			"Mozilla/5.0 (Linux; U; Android 2.1; en-us; Nexus One Build/ERD62) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17",
+			"Mozilla/5.0 (Linux; U; Android 4.0.3; ko-kr; LG-L160L Build/IML74K) AppleWebkit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30"
 	};
 
 	// proxy server with fake browser reference
@@ -575,6 +624,7 @@ public class BrowserTest {
 		testAgents(lynxClient, Browser.LYNX);
 		testAgents(konqueror, Browser.KONQUEROR);
 		testAgents(chromeMobile, Browser.CHROME_MOBILE);
+		testAgents(chromeMobile31, Browser.CHROME31);
 		testAgents(chrome, Browser.CHROME);
 		testAgents(chrome8, Browser.CHROME8);
 		testAgents(chrome9, Browser.CHROME9);
@@ -599,7 +649,8 @@ public class BrowserTest {
 		testAgents(firefox36, Browser.FIREFOX36);
 		testAgents(firefox3mobile, Browser.FIREFOX3MOBILE);
 		testAgents(firefoxMobile, Browser.FIREFOX_MOBILE);
-		testAgents(firefoxMobile23, Browser.FIREFOX_MOBILE23);
+		testAgents(firefoxMobile13, Browser.FIREFOX13);
+		testAgents(firefoxMobile23, Browser.FIREFOX23);
 		testAgents(safari, Browser.SAFARI);
 		testAgents(dolfin, Browser.DOLFIN2);
 		testAgents(safari8, Browser.SAFARI8);
@@ -608,9 +659,17 @@ public class BrowserTest {
 		testAgents(safari5, Browser.SAFARI5);
 		testAgents(safari4, Browser.SAFARI4);
 		testAgents(mobileSafari, Browser.MOBILE_SAFARI);
+		testAgents(mobileSafari4, Browser.MOBILE_SAFARI4);
+		testAgents(mobileSafari5, Browser.MOBILE_SAFARI5);
+		testAgents(mobileSafari6, Browser.MOBILE_SAFARI6);
 		testAgents(appleMail, Browser.APPLE_WEB_KIT);
+		testAgents(androidWebKit, Browser.ANDROID_WEB_KIT);
 		testAgents(omniWeb, Browser.OMNIWEB);
 		testAgents(operaMini, Browser.OPERA_MINI);
+		testAgents(operaMobi, Browser.OPERA_MOBILE);
+		testAgents(operaMobi10, Browser.OPERA10);
+		testAgents(operaMobi11, Browser.OPERA11);
+		testAgents(operaMobi12, Browser.OPERA12);
 		testAgents(opera9, Browser.OPERA9);
 		testAgents(opera, Browser.OPERA);
 		testAgents(opera10, Browser.OPERA10);
@@ -689,6 +748,122 @@ public class BrowserTest {
 			assertTrue(browser.toString() + "==" + retrievedIdValues.get(browser.getId()), !retrievedIdValues.containsKey(browser.getId()));
 			retrievedIdValues.put(browser.getId(), browser);
 		}
+	}
+
+	private static class BrowserData {
+		final String name;
+		final String version;
+		final String userAgent;
+
+		BrowserData(String name, String version, String userAgent) {
+			this.name = name;
+			this.version = version;
+			this.userAgent = userAgent;
+		}
+
+		@Override
+		public String toString() {
+			return "BrowserData [name=" + name + ", version=" + version + ", userAgent=" + userAgent + "]";
+
+		}
+	}
+
+	private static void testBrowserParser(Collection<BrowserData> browserDatas, Browser group, int minVersion, int maxVersion) throws Exception {
+		testBrowserParser(browserDatas, group, minVersion, maxVersion, null);
+	}
+
+	private static void testBrowserParser(Collection<BrowserData> browserDatas, Browser group, int minVersion, int maxVersion, Browser alternate) throws Exception {
+		for (BrowserData browserData : browserDatas) {
+			Browser parsedBrowser = Browser.parseUserAgentString(browserData.userAgent);
+			Browser parsedGroup = parsedBrowser.getGroup();
+
+			assertNotNull(parsedBrowser);
+			assertTrue(browserData + ": " + parsedGroup + " - " + parsedBrowser,
+					(parsedGroup == group) || (parsedGroup == alternate) ||
+							parsedBrowser.name().startsWith(group.name()) ||
+							parsedBrowser.name().startsWith(alternate.name()));
+
+			int version = -1;
+			Version parsedVersion = parsedBrowser.getVersion(browserData.userAgent);
+			if (parsedVersion != null) {
+				version = Integer.parseInt(parsedVersion.getMajorVersion());
+			}
+
+			if (version != -1 && version >= minVersion && version <= maxVersion && !browserData.version.isEmpty() && browserData.version.length() < 3) {
+				if (!checkVersion(browserData, parsedBrowser, parsedVersion))
+					return;
+				assertTrue(browserData + ": parsed as " + parsedBrowser + " and version is " + version,
+						browserData.name.startsWith(parsedBrowser.getName()) || parsedBrowser.getName().startsWith(browserData.name) ||
+								browserData.name.startsWith(parsedGroup.getName()) && checkVersion(browserData, parsedBrowser, parsedVersion));
+			} else {
+				if (alternate == null) {
+					assertTrue(browserData + ": parsed as " + parsedBrowser,
+							browserData.name.startsWith(parsedBrowser.getName()) ||
+									browserData.name.startsWith(parsedGroup.getName()));
+					assertTrue(browserData + ": parsed as " + parsedBrowser,
+							parsedGroup == group);
+				} else {
+					assertTrue(browserData + ": parsed as " + parsedBrowser,
+							browserData.name.startsWith(parsedBrowser.getName()) ||
+									browserData.name.startsWith(parsedGroup.getName()) ||
+									browserData.name.startsWith(alternate.getName()) ||
+									alternate == parsedBrowser || alternate == parsedGroup);
+					if (!(browserData.name.startsWith(parsedBrowser.getName()) || browserData.name.startsWith(parsedGroup.getName()))) {
+						System.out.println("Warning: " + browserData + " expected as " + group + " but parsed was " + parsedBrowser);
+					}
+				}
+			}
+		}
+	}
+
+	private static boolean checkVersion(BrowserData browserData, Browser browser, Version version) {
+		return version.getMajorVersion().equals(browserData.version) ||
+				(browser == Browser.IE10 && version.getMajorVersion().equals("8")) ||
+				(browser == Browser.IE8 && version.getMajorVersion().equals("7")) ||
+				(browser == Browser.IE8 && browserData.version.equals("6")) ||
+				(browser == Browser.IE6 && browserData.version.equals("5"));
+	}
+
+	private static String readFile(String filename) throws IOException, URISyntaxException {
+		URL url = BrowserTest.class.getResource("/uapages/" + filename);
+		if (url == null)
+			throw new IOException("Can't open resource " + filename);
+		return new String(Files.readAllBytes(Paths.get(url.toURI())), "UTF-8");
+	}
+
+	private static Collection<BrowserData> filterHtml(String html) throws Exception {
+		final Pattern beginBrowsersList = Pattern.compile("<div\\sid=[\"']liste[^>]*>", Pattern.CASE_INSENSITIVE);
+		final Pattern endBrowsersList = Pattern.compile("</div>", Pattern.CASE_INSENSITIVE);
+		final Pattern browsersData = Pattern.compile("<h4>([^<\\d]+)(\\d*)?[^<]*</h4>\\s*<ul>(.+?)</ul>", Pattern.DOTALL | Pattern.CASE_INSENSITIVE);
+		final List<BrowserData> lines = new ArrayList<BrowserData>();
+
+		html = HtmlParserUtils.extractArea(html, beginBrowsersList, endBrowsersList, "Browsers list");
+		Matcher m = browsersData.matcher(html);
+		while (m.find()) {
+			String name = m.group(1).trim();
+			String version = m.group(2);
+			for (String s : HtmlParserUtils.parseTagsInnerHtml(m.group(3), "li")) {
+				lines.add(new BrowserData(name, version, HtmlParserUtils.getInnerText(s)));
+			}
+		}
+		return lines;
+	}
+
+	private static Collection<BrowserData> convertHtmlToCollection(String pageName) throws Exception {
+		return filterHtml(readFile(pageName + ".html"));
+	}
+
+	@Test
+	public void userAgentsTest() throws Exception {
+		testBrowserParser(convertHtmlToCollection("InternetExplorer"), Browser.IE, 5, 11);
+		testBrowserParser(convertHtmlToCollection("IEMobile"), Browser.IEMOBILE, 6, 11);
+		testBrowserParser(convertHtmlToCollection("Firefox"), Browser.FIREFOX, 1, 40);
+		testBrowserParser(convertHtmlToCollection("Chrome"), Browser.CHROME, 8, 41);
+		testBrowserParser(convertHtmlToCollection("Safari"), Browser.SAFARI, 4, 8, Browser.APPLE_WEB_KIT);
+		testBrowserParser(convertHtmlToCollection("AndroidWebkitBrowser"), Browser.ANDROID_WEB_KIT, 0, 3, Browser.SAFARI);
+		testBrowserParser(convertHtmlToCollection("Opera"), Browser.OPERA, 9, 28);
+		testBrowserParser(convertHtmlToCollection("OperaMobile"), Browser.OPERA_MOBILE, 0, 28, Browser.OPERA);
+		testBrowserParser(convertHtmlToCollection("OperaMini"), Browser.OPERA_MINI, 0, 5, Browser.OPERA);
 	}
 
 }
