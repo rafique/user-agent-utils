@@ -87,6 +87,25 @@ public class UserAgentTest {
 		assertEquals(Browser.ANDROID_WEB_KIT, userAgent.getBrowser());
 	}
 
+	@Test
+	public void testBotUserAgentString() {
+		String[] botUserAgents = {
+				"Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)",
+				"Mozilla/5.0 (iPhone; CPU iPhone OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/7.0 Mobile/11A465 Safari/9537.53 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)",
+				"Mozilla/5.0 (Windows Phone 8.1; ARM; Trident/7.0; Touch; rv:11.0; IEMobile/11.0; NOKIA; Lumia 530) like Gecko (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)",
+				"msnbot/2.0b (+http://search.msn.com/msnbot.htm)",
+				"msnbot-media/1.1 (+http://search.msn.com/msnbot.htm)",
+				"adidxbot/1.1 (+http://search.msn.com/msnbot.htm)",
+				"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/534+ (KHTML, like Gecko) BingPreview/1.0b",
+				"Mozilla/5.0 (Windows Phone 8.1; ARM; Trident/7.0; Touch; rv:11.0; IEMobile/11.0; NOKIA; Lumia 530) like Gecko BingPreview/1.0b"
+		};
+		for (String botUserAgent : botUserAgents) {
+			UserAgent userAgent = UserAgent.parseUserAgentString(botUserAgent);
+			assertEquals("'" + botUserAgent + "' parsed as " + userAgent.getBrowser(), BrowserType.ROBOT, userAgent.getBrowser().getBrowserType());
+			assertTrue("'" + botUserAgent + "' parsed as " + userAgent.getBrowser(), Browser.BOT.equals(userAgent.getBrowser()) || Browser.BOT.equals(userAgent.getBrowser().getGroup()));
+		}
+	}
+
 	/**
 	 * Test method for {@link eu.bitwalker.useragentutils.UserAgent#parseUserAgentString(java.lang.String)} that checks for proper handling of a <code>null</code> userAgentString.
 	 */

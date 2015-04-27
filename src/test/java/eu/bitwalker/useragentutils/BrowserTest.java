@@ -445,16 +445,16 @@ public class BrowserTest {
 	String[] operaMobi = {
 			"Opera (Android 2.2; Opera Mobi/-2118645896; U; pl) Presto/2.7.60 Version/13.1"
 	};
-	
+
 	String[] operaMobi10 = {
 			"Opera/9.80 (S60; SymbOS; Opera Mobi/498; U; sv) Presto/2.4.18 Version/10.00"
 	};
-	
+
 	String[] operaMobi11 = {
 			"Opera/9.80 (S60; SymbOS; Opera Mobi/SYB-1103211396; U; es-LA) Presto/2.7.81 Version/11.00",
 			"Opera/9.80 (Android 2.3.3; Linux; Opera Mobi/ADR-1111101157; U; es-ES) Presto/2.9.201 Version/11.50"
 	};
-	
+
 	String[] operaMobi12 = {
 			"Opera/12.02 (Android 4.1; Linux; Opera Mobi/ADR-1111101157; U; en-US) Presto/2.9.201 Version/12.02"
 	};
@@ -778,10 +778,16 @@ public class BrowserTest {
 			Browser parsedGroup = parsedBrowser.getGroup();
 
 			assertNotNull(parsedBrowser);
-			assertTrue(browserData + ": " + parsedGroup + " - " + parsedBrowser,
-					(parsedGroup == group) || (parsedGroup == alternate) ||
-							parsedBrowser.name().startsWith(group.name()) ||
-							parsedBrowser.name().startsWith(alternate.name()));
+			if (alternate != null) {
+				assertTrue(browserData + ": " + parsedGroup + " - " + parsedBrowser,
+						(parsedGroup == group) || (parsedGroup == alternate) ||
+								parsedBrowser.name().startsWith(group.name()) ||
+								parsedBrowser.name().startsWith(alternate.name()));
+			} else {
+				assertTrue(browserData + ": " + parsedGroup + " - " + parsedBrowser,
+						(parsedGroup == group) || (parsedGroup == alternate) ||
+								parsedBrowser.name().startsWith(group.name()));
+			}
 
 			int version = -1;
 			Version parsedVersion = parsedBrowser.getVersion(browserData.userAgent);
@@ -855,7 +861,7 @@ public class BrowserTest {
 
 	@Test
 	public void userAgentsTest() throws Exception {
-		testBrowserParser(convertHtmlToCollection("InternetExplorer"), Browser.IE, 5, 11);
+		testBrowserParser(convertHtmlToCollection("InternetExplorer"), Browser.IE, 5, 11, Browser.BOT);
 		testBrowserParser(convertHtmlToCollection("IEMobile"), Browser.IEMOBILE, 6, 11);
 		testBrowserParser(convertHtmlToCollection("Firefox"), Browser.FIREFOX, 1, 40);
 		testBrowserParser(convertHtmlToCollection("Chrome"), Browser.CHROME, 8, 41);
