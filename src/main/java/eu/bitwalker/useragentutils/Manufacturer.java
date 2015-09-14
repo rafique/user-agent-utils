@@ -76,7 +76,7 @@ public enum Manufacturer {
 	/**
 	 * Hewlett-Packard Company, previously Palm
 	 */
-	HP(8, "Hewlet Packard"),
+	HP(8, "Hewlett Packard"),
 	/**
 	 * Sony Ericsson Mobile Communications AB
 	 */
@@ -132,7 +132,12 @@ public enum Manufacturer {
 	/**
 	 * Adobe Systems Inc.
 	 */
-	ADOBE(23, "Adobe Systems Inc.");
+	ADOBE(23, "Adobe Systems Inc."),
+	/**
+	 * Canonical Ltd.
+	 */
+	CONONICAL(25,"Canonical Ltd.");
+	
 	
 	
 	private final short id;

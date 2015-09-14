@@ -44,6 +44,10 @@ package eu.bitwalker.useragentutils;
 public enum RenderingEngine {
 	
 	/**
+	 * EdgeHTML is a proprietary layout engine developed for the Microsoft Edge web browser, developed by Microsoft.
+	 */
+	EDGE_HTML("EdgeHTML"),
+	/**
 	 * Trident is the the Microsoft layout engine, mainly used by Internet Explorer.
 	 */
 	TRIDENT("Trident"),
@@ -73,6 +77,10 @@ public enum RenderingEngine {
 	KHTML("KHTML"),
 	/**
 	 * Other or unknown layout engine.
+	 */
+	BLINK("Blink"),
+	/**
+	 * Layout engine developed as part ofthe Chromium project. Fored from WebKit.
 	 */
 	OTHER("Other");
 	

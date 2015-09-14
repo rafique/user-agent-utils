@@ -44,6 +44,8 @@ import java.util.List;
 
 import org.junit.Test;
 
+import eu.bitwalker.useragentutils.Application;
+
 /**
  * Test class for application detection.
  * 
@@ -129,11 +131,11 @@ public class ApplicationTest {
 	/**
 	 * Test method for
 	 * {@link eu.bitwalker.useragentutils.Application#isInReferrerString(java.lang.String)}
-	 * .
 	 */
 	@Test
 	public void testIsBrowser() {
-		assertTrue(Application.GMAIL.isInReferrerString("http://mail.google.com/mail/?ui=1&ik=xx&view=cv&search=inbox&th=xx&ww=xx&cvap=5&qt=&zx=xx"));
+		assertTrue(Application.GMAIL
+				.isInReferrerString("http://mail.google.com/mail/?ui=1&ik=xx&view=cv&search=inbox&th=xx&ww=xx&cvap=5&qt=&zx=xx"));
 	}
 
 	/**
@@ -166,7 +168,6 @@ public class ApplicationTest {
 	 */
 	@Test
 	public void testUniqueIdValues() {
-
 		List<Short> retrievedIdValues = new ArrayList<Short>();
 
 		for (Application application : Application.values()) {

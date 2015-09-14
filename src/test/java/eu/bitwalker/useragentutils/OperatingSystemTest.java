@@ -45,6 +45,9 @@ import java.util.List;
 
 import org.junit.Test;
 
+import eu.bitwalker.useragentutils.DeviceType;
+import eu.bitwalker.useragentutils.OperatingSystem;
+
 /**
  * @author harald
  * 
@@ -182,7 +185,12 @@ public class OperatingSystemTest {
 	{
 			"Mozilla/5.0 (iPhone; CPU iPhone OS 8_1 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12B401 Safari/600.1.4"
 	};
-
+	
+	String[] iPhone8_3 = 
+	{
+			"Mozilla/5.0 (iPhone; CPU iPhone OS 8_3 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12F70 Safari/600.1.4"
+	};
+	
 	String[] iPods = {
 			"Mozilla/5.0 (iPod; U; CPU like Mac OS X; nl-nl) AppleWebKit/420.1 (KHTML, like Gecko)",
 			"Mozilla/5.0 (iPod; U; CPU like Mac OS X; en) AppleWebKit/420.1 (KHTML, like Gecko)",
@@ -206,7 +214,11 @@ public class OperatingSystemTest {
 	};
 
 	String[] iPadIos8 = {
-			"Mozilla/5.0 (iPad; CPU OS 8_0 like Mac OS X) AppleWebKit/538.34.9 (KHTML, like Gecko) Mobile/12A4265u"
+			"Mozilla/5.0 (iPad; CPU OS 8_0 like Mac OS X) AppleWebKit/538.34.9 (KHTML, like Gecko) Mobile/12A4265u",
+	};
+	
+	String[] iPadIos8_4 = {
+			"Mozilla/5.0 (iPad; CPU OS 8_4 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12H143 Safari/600.1.4"
 	};
 
 	String[] blackberries = {
@@ -271,6 +283,10 @@ public class OperatingSystemTest {
 			"Mozilla/5.0 (Linux; U; Android 4.0.4; en-us; Glass 1 Build/IMM76L; XE7) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30"
 	};
 
+	String[] android5_tablet = {
+			"Mozilla/5.0 (Linux; Android 5.0; Nexus 9 Build/LRX21L) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.59 Safari/537.36" // Nexus 9
+	};
+
 	String[] androidMobile = {
 			"Mozilla/5.0 (Android; Mobile; rv:23.0) Gecko/23.0 Firefox/23.0" // no OS version information in UA-string
 	};
@@ -312,7 +328,8 @@ public class OperatingSystemTest {
 	};
 
 	String[] windows10 = {
-			"Mozilla/5.0 (Windows NT 6.4; WOW64; rv:32.0) Gecko/20100101 Firefox/32.0 Build ID: 20141001101141"
+			"Mozilla/5.0 (Windows NT 6.4; WOW64; rv:32.0) Gecko/20100101 Firefox/32.0 Build ID: 20141001101141",
+			"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.71 Safari/537.36 Edge/12.0"
 	};
 
 	String[] windowsMobile7 = {
@@ -328,7 +345,11 @@ public class OperatingSystemTest {
 	String[] windowsMobile8_1 = {
 			"Mozilla/5.0 (Windows Phone 8.1; ARM; Trident/7.0; Touch; rv:11.0; IEMobile/11.0; HTC; HTC6990LVW) like Gecko"
 	};
-
+	
+	String[] windows10mobile = {
+			"Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; NOKIA; Lumia 735) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.71 Mobile Safari/537.36 Edge/12.0"
+	};
+	
 	String[] bada = {
 			"Mozilla/5.0 (SAMSUNG; SAMSUNG-GT-S8500/S8500NEJE5; U; Bada/1.0; fr-fr) AppleWebKit/533.1 (KHTML, like Gecko) Dolfin/2.0 Mobile WVGA SMM-MMS/1.2.0 NexPlayer/3.0 profile/MIDP-2.1 configuration/CLDC-1.1 OPN-B",
 			"Mozilla/5.0 (SAMSUNG; SAMSUNG-GT-S8500/S8500XXJL2; U; Bada/1.2; de-de) AppleWebKit/533.1 (KHTML, like Gecko) Dolfin/2.2 Mobile WVGA SMM-MMS/1.2.0 OPN-B"
@@ -336,6 +357,10 @@ public class OperatingSystemTest {
 
 	String[] maemo = {
 			"Mozilla/5.0 (X11; U; Linux armv7l; en-US; rv:1.9.2a1pre) Gecko/20091127 Firefox/3.5 Maemo Browser 1.5.6 RX-51 N900"
+	};
+	
+	String[] ubuntu_touch = {
+			"Mozilla/5.0 (Linux; Ubuntu 14.04 like Android 4.4) AppleWebKit/537.36 Chromium/35.0.1870.2 Mobile Safari/537.36 "
 	};
 
 	String[] kindle2 = {
@@ -381,6 +406,7 @@ public class OperatingSystemTest {
 		testAgents(windowsMobile7, OperatingSystem.WINDOWS_MOBILE7);
 		testAgents(windowsMobile8, OperatingSystem.WINDOWS_PHONE8);
 		testAgents(windowsMobile8_1, OperatingSystem.WINDOWS_PHONE8_1);
+		testAgents(windows10mobile, OperatingSystem.WINDOWS_10_MOBILE);
 		testAgents(windowsVista, OperatingSystem.WINDOWS_VISTA);
 		testAgents(windows7, OperatingSystem.WINDOWS_7);
 		testAgents(windows8, OperatingSystem.WINDOWS_8);
@@ -402,10 +428,12 @@ public class OperatingSystemTest {
 		testAgents(iPhone7, OperatingSystem.iOS7_IPHONE);
 		testAgents(iPhone8, OperatingSystem.iOS8_IPHONE);
 		testAgents(iPhone8_1, OperatingSystem.iOS8_1_IPHONE);
+		testAgents(iPhone8_3, OperatingSystem.iOS8_3_IPHONE);
 		testAgents(iPods, OperatingSystem.MAC_OS_X_IPOD);
 		testAgents(iPadIos6, OperatingSystem.iOS6_IPAD);
 		testAgents(iPadIos7, OperatingSystem.iOS7_IPAD);
 		testAgents(iPadIos8, OperatingSystem.iOS8_IPAD);
+		testAgents(iPadIos8_4, OperatingSystem.iOS8_4_IPAD);
 		testAgents(iPad, OperatingSystem.MAC_OS_X_IPAD);
 		testAgents(blackberries, OperatingSystem.BLACKBERRY);
 		testAgents(blackberry6, OperatingSystem.BLACKBERRY6);
@@ -417,6 +445,7 @@ public class OperatingSystemTest {
 		testAgents(android3_tablet, OperatingSystem.ANDROID3_TABLET);
 		testAgents(android4_tablet, OperatingSystem.ANDROID4_TABLET);
 		testAgents(android4_wearable, OperatingSystem.ANDROID4_WEARABLE);
+		testAgents(android5_tablet, OperatingSystem.ANDROID5_TABLET);
 		testAgents(androidMobile, OperatingSystem.ANDROID_MOBILE);
 		testAgents(androidTablet, OperatingSystem.ANDROID_TABLET);
 		testAgents(chromeOS, OperatingSystem.CHROME_OS);
@@ -429,7 +458,7 @@ public class OperatingSystemTest {
 		testAgents(genericMobile, OperatingSystem.UNKNOWN_MOBILE);
 		testAgents(genericTablet, OperatingSystem.UNKNOWN_TABLET);
 		testAgents(unknown, OperatingSystem.UNKNOWN);
-
+		testAgents(ubuntu_touch, OperatingSystem.UBUNTU_TOUCH_MOBILE);
 	}
 
 	@Test
@@ -457,6 +486,7 @@ public class OperatingSystemTest {
 		testDeviceTypes(iPad, DeviceType.TABLET);
 		testDeviceTypes(gameconsoles, DeviceType.GAME_CONSOLE);
 		testDeviceTypes(googleTV, DeviceType.DMR);
+		testDeviceTypes(ubuntu_touch, DeviceType.MOBILE);
 	}
 
 	public void testGroupRecursion() {
@@ -476,8 +506,7 @@ public class OperatingSystemTest {
 		{
 			operatingSystem = OperatingSystem.valueOf((short) 0);
 			fail("Should have thrown IllegalArgumentException");
-		} catch (IllegalArgumentException e)
-		{
+		} catch (IllegalArgumentException e) {
 			// good
 		}
 	}
@@ -493,8 +522,7 @@ public class OperatingSystemTest {
 		{
 			operatingSystem = OperatingSystem.valueOf("illegal");
 			fail("Should have thrown IllegalArgumentException");
-		} catch (IllegalArgumentException e)
-		{
+		} catch (IllegalArgumentException e) {
 			// good
 		}
 	}

@@ -1,8 +1,6 @@
 package eu.bitwalker.useragentutils;
 
-public class StringUtils {
-	private StringUtils() {
-	}
+public class Utils {
 
 	static String[] toLowerCase(String[] strArr) {
 		if (strArr == null)
@@ -23,6 +21,17 @@ public class StringUtils {
 			result[i] = ch;
 		}
 		return new String(result);
+	}
+
+	static boolean contains(String str, String[] strArr) {
+		if (strArr == null)
+			return false;
+		for (String arrStr : strArr) {
+			if (str.contains(arrStr)) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 }
