@@ -96,7 +96,9 @@ public class BrowserTest {
 	};
 
 	String[] edgeClients = new String[] {
-			"Mozilla/5.0 (Windows NT 6.4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.143 Safari/537.36 Edge/12.0"
+			"Mozilla/5.0 (Windows NT 6.4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.143 Safari/537.36 Edge/12.0",
+			"Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240",
+			"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10532"
 	};
 	
 	String[] edgeMobileClients = new String[] {
@@ -387,8 +389,8 @@ public class BrowserTest {
 
 	String[] opera = {
 			"Opera/8.0 (Macintosh; PPC Mac OS X; U; en)",
-	};
-
+		};
+	
 	String[] opera9 = {
 			"Opera/9.52 (Windows NT 5.1; U; en)",
 			"Opera/9.20 (Macintosh; Intel Mac OS X; U; en)"
@@ -452,6 +454,13 @@ public class BrowserTest {
 	String[] opera27 = {
 			"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36 OPR/27.0.1689.76"
 	};
+
+	String[] opera31 = {
+			"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36 OPR/31.0.1889.174",
+			"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36 OPR/31.0.1889.174",
+			"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36 OPR/31.0.1889.174"
+	};
+
 	
 	String[] operaMini = {
 			"Opera/9.60 (J2ME/MIDP; Opera Mini/4.2.13337/458; U; en) Presto/2.2.0",
@@ -625,6 +634,7 @@ public class BrowserTest {
 		testVersions("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.57 Safari/537.36 OPR/16.0.1196.73", new Version("16.0.1196.73", "16", "0"));
 		testVersions("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.65 Safari/537.36", new Version("29.0.1547.65", "29", "0"));
 		testVersions("Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko", new Version("11.0", "11", "0"));
+		testVersions("Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240", new Version("12.10240", "12", "10240"));
 		testVersions("Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C)", new Version("7.0", "7", "0")); // issue #31
 		testVersions("Mozilla/5.0 (Linux; Android 4.1.2; LT22i Build/6.2.A.1.100) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.59 Mobile Safari/537.36", new Version("31.0.1650.59", "31", "0"));
 		testVersions("Windows-RSS-Platform/2.0 (IE 11.0; Windows NT 6.1)", new Version("11.0", "11", "0"));
@@ -735,6 +745,7 @@ public class BrowserTest {
 		testAgents(opera23, Browser.OPERA23);
 		testAgents(opera24, Browser.OPERA24);
 		testAgents(opera27, Browser.OPERA27);
+		testAgents(opera31, Browser.OPERA31);
 		testAgents(operaCoast, Browser.COAST1);
 		testAgents(camino2, Browser.CAMINO2);
 		testAgents(camino, Browser.CAMINO);

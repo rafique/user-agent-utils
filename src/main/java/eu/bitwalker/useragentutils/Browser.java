@@ -90,7 +90,7 @@ public enum Browser {
 	IEMOBILE7(Manufacturer.MICROSOFT, Browser.IEMOBILE, 121, "IE Mobile 7", new String[] { "IEMobile 7", "IEMobile/7" }, new String[] { "Opera" }, BrowserType.MOBILE_BROWSER, RenderingEngine.TRIDENT, "IEMobile[\\s/](([\\d]+)\\.([\\w]+))"), // before MSIE strings
 	IEMOBILE6(Manufacturer.MICROSOFT, Browser.IEMOBILE, 120, "IE Mobile 6", new String[] { "IEMobile 6" }, new String[] { "Opera" }, BrowserType.MOBILE_BROWSER, RenderingEngine.TRIDENT, "IEMobile[\\s/](([\\d]+)\\.([\\w]+))"), // before MSIE
 	IE_XBOX(Manufacturer.MICROSOFT, Browser.IE, 360, "Xbox", new String[] { "xbox" }, new String[] {}, BrowserType.WEB_BROWSER, RenderingEngine.TRIDENT, null),
-	IE11(Manufacturer.MICROSOFT, Browser.IE, 95, "Internet Explorer 11", new String[] { "Trident/7", "IE 11." }, new String[] { "Opera" }, BrowserType.WEB_BROWSER, RenderingEngine.TRIDENT, "(?:Trident\\/7|IE)(?:\\.[0-9]*;)?(?:.*rv:| )(([0-9]+)\\.?([0-9]+))"), // before Mozilla
+	IE11(Manufacturer.MICROSOFT, Browser.IE, 95, "Internet Explorer 11", new String[] { "Trident/7", "IE 11." }, new String[] { "Opera" }, BrowserType.WEB_BROWSER, RenderingEngine.TRIDENT, "(?:Trident/7|IE)(?:\\.[0-9]*;)?(?:.*rv:| )(([0-9]+)\\.?([0-9]+))"), // before Mozilla
 	IE10(Manufacturer.MICROSOFT, Browser.IE, 92, "Internet Explorer 10", new String[] { "Trident/6", "MSIE 10" }, new String[] { "Opera" }, BrowserType.WEB_BROWSER, RenderingEngine.TRIDENT, null), // before MSIE
 	IE9(Manufacturer.MICROSOFT, Browser.IE, 90, "Internet Explorer 9", new String[] { "MSIE 9" }, new String[] { "Opera" }, BrowserType.WEB_BROWSER, RenderingEngine.TRIDENT, null), // before MSIE
 	IE8(Manufacturer.MICROSOFT, Browser.IE, 80, "Internet Explorer 8", new String[] { "MSIE 8", "OptimizedIE8" }, new String[] { "Trident/6", "Opera" }, BrowserType.WEB_BROWSER, RenderingEngine.TRIDENT, null), // before MSIE
@@ -102,16 +102,16 @@ public enum Browser {
 	/**
 	 * Family of Microsoft Edge browsers. Pretends to be Chrome and claims to be webkit compatible.
 	 */
-	EDGE(Manufacturer.MICROSOFT, null, 300, "Microsoft Edge", new String[] { "Edge" }, null, BrowserType.WEB_BROWSER, RenderingEngine.EDGE_HTML, "(?:Edge\\\\/((12)\\\\.([0-9]*)))"),
-	EDGE12(Manufacturer.MICROSOFT, Browser.EDGE, 301, "Microsoft Edge", new String[] { "Edge/12" }, new String[] { "Mobile" }, BrowserType.WEB_BROWSER, RenderingEngine.EDGE_HTML, "(?:Edge\\\\/((12)\\\\.([0-9]*)))"),
-	EDGE_MOBILE12(Manufacturer.MICROSOFT, Browser.EDGE, 302, "Microsoft Edge Mobile", new String[] { "Mobile Safari", "Edge/12" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.EDGE_HTML, "(?:Edge\\\\/((12)\\\\.([0-9]*)))"),
+	EDGE(Manufacturer.MICROSOFT, null, 300, "Microsoft Edge", new String[] { "Edge" }, null, BrowserType.WEB_BROWSER, RenderingEngine.EDGE_HTML, "(?:Edge/((12)\\.([0-9]*)))"),
+	EDGE12(Manufacturer.MICROSOFT, Browser.EDGE, 301, "Microsoft Edge", new String[] { "Edge/12" }, new String[] { "Mobile" }, BrowserType.WEB_BROWSER, RenderingEngine.EDGE_HTML, "(?:Edge/((12)\\.([0-9]*)))"),
+	EDGE_MOBILE12(Manufacturer.MICROSOFT, Browser.EDGE, 302, "Microsoft Edge Mobile", new String[] { "Mobile Safari", "Edge/12" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.EDGE_HTML, "(?:Edge/((12)\\.([0-9]*)))"),
 
 	/**
 	 * Google Chrome browser
 	 */
-	CHROME(Manufacturer.GOOGLE, null, 1, "Chrome", new String[] { "Chrome", "CrMo", "CriOS" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "Chrome\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"), // before Mozilla
-	ANDROID_WEB_KIT(Manufacturer.GOOGLE, null, 2, "Android Webkit Browser", new String[] { "Android", "Build/" }, new String[] { "Windows", "Firefox", "Chrome", "Opera", "OPR/", "Web Preview", "Googlebot-Mobile" }, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, "Version\\/(([\\d]+)\\.([\\w]+))"), // Android WebKit also only identifies itself as AppleWebKit
-	CHROME_MOBILE(Manufacturer.GOOGLE, Browser.CHROME, 100, "Chrome Mobile", new String[] { "CrMo", "CriOS", "Mobile Safari" }, new String[] { "OPR/", "Web Preview" }, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, "(?:CriOS|CrMo|Chrome)\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
+	CHROME(Manufacturer.GOOGLE, null, 1, "Chrome", new String[] { "Chrome", "CrMo", "CriOS" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "Chrome/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"), // before Mozilla
+	ANDROID_WEB_KIT(Manufacturer.GOOGLE, null, 2, "Android Webkit Browser", new String[] { "Android", "Build/" }, new String[] { "Windows", "Firefox", "Chrome", "Opera", "OPR/", "Web Preview", "Googlebot-Mobile" }, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, "Version/(([\\d]+)\\.([\\w]+))"), // Android WebKit also only identifies itself as AppleWebKit
+	CHROME_MOBILE(Manufacturer.GOOGLE, Browser.CHROME, 100, "Chrome Mobile", new String[] { "CrMo", "CriOS", "Mobile Safari" }, new String[] { "OPR/", "Web Preview" }, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, "(?:CriOS|CrMo|Chrome)/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
 	CHROME46(Manufacturer.GOOGLE, Browser.CHROME, 51, "Chrome 46", new String[] { "Chrome/46" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null), // before Mozilla
 	CHROME45(Manufacturer.GOOGLE, Browser.CHROME, 50, "Chrome 45", new String[] { "Chrome/45" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null), // before Mozilla
 	CHROME44(Manufacturer.GOOGLE, Browser.CHROME, 49, "Chrome 44", new String[] { "Chrome/44" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null), // before Mozilla
@@ -154,14 +154,14 @@ public enum Browser {
 
 	OMNIWEB(Manufacturer.OTHER, null, 2, "Omniweb", new String[] { "OmniWeb" }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null), //
 
-	SAFARI(Manufacturer.APPLE, null, 1, "Safari", new String[] { "Safari" }, new String[] { "bot", "preview", "OPR/", "Coast/", "Vivaldi", "CFNetwork", "Web Preview", "Googlebot-Mobile", "Android", "bingbot/" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "Version\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?)"), // before AppleWebKit
+	SAFARI(Manufacturer.APPLE, null, 1, "Safari", new String[] { "Safari" }, new String[] { "bot", "preview", "OPR/", "Coast/", "Vivaldi", "CFNetwork", "Web Preview", "Googlebot-Mobile", "Android", "bingbot/" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "Version/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?)"), // before AppleWebKit
 	BLACKBERRY10(Manufacturer.BLACKBERRY, Browser.SAFARI, 10, "BlackBerry", new String[] { "BB10" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, null),
 	MOBILE_SAFARI(Manufacturer.APPLE, Browser.SAFARI, 2, "Mobile Safari", new String[] { "Mobile Safari", "Mobile/" }, new String[] { "bot", "preview", "OPR/", "Coast/", "Vivaldi", "CFNetwork", "Googlebot-Mobile", "Build/", "bingbot/" }, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, null), // before Safari
 	MOBILE_SAFARI7(Manufacturer.APPLE, Browser.MOBILE_SAFARI, 107, "Mobile Safari 7", new String[] { "Mobile/11" }, new String[] { "bot", "preview", "OPR/", "Coast/", "Vivaldi", "CFNetwork", "Googlebot-Mobile", "Build/", "bingbot/" }, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, null), // before Safari
 	MOBILE_SAFARI6(Manufacturer.APPLE, Browser.MOBILE_SAFARI, 106, "Mobile Safari 6", new String[] { "Mobile/10" }, new String[] { "bot", "preview", "OPR/", "Coast/", "Vivaldi", "CFNetwork", "Googlebot-Mobile", "Build/", "bingbot/" }, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, null), // before Safari
 	MOBILE_SAFARI5(Manufacturer.APPLE, Browser.MOBILE_SAFARI, 105, "Mobile Safari 5", new String[] { "Mobile/9" }, new String[] { "bot", "preview", "OPR/", "Coast/", "Vivaldi", "CFNetwork", "Googlebot-Mobile", "Build/", "bingbot/" }, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, null), // before Safari
 	MOBILE_SAFARI4(Manufacturer.APPLE, Browser.MOBILE_SAFARI, 104, "Mobile Safari 4", new String[] { "Mobile/8", "Mobile/7", "Mobile Safari/" }, new String[] { "bot", "preview", "OPR/", "Coast/", "Vivaldi", "CFNetwork", "Googlebot-Mobile", "Build/", "bingbot/" }, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, null), // before Safari
-	SILK(Manufacturer.AMAZON, Browser.SAFARI, 15, "Silk", new String[] { "Silk/" }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "Silk\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?(\\-[\\w]+)?)"), // http://en.wikipedia.org/wiki/Amazon_Silk
+	SILK(Manufacturer.AMAZON, Browser.SAFARI, 15, "Silk", new String[] { "Silk/" }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "Silk/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?(\\-[\\w]+)?)"), // http://en.wikipedia.org/wiki/Amazon_Silk
 	SAFARI8(Manufacturer.APPLE, Browser.SAFARI, 8, "Safari 8", new String[] { "Version/8" }, new String[] { "Applebot", "Coast/", "Googlebot-Mobile", "Build/", "bingbot/" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null), // before AppleWebKit
 	SAFARI7(Manufacturer.APPLE, Browser.SAFARI, 7, "Safari 7", new String[] { "Version/7" }, new String[] { "bing", "Coast/", "Googlebot-Mobile", "Build/", "bingbot/" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null), // before AppleWebKit
 	SAFARI6(Manufacturer.APPLE, Browser.SAFARI, 6, "Safari 6", new String[] { "Version/6" }, new String[] { "Coast/", "Googlebot-Mobile", "Build/", "bingbot/" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null), // before AppleWebKit
@@ -171,33 +171,37 @@ public enum Browser {
 	/**
 	 * Opera Coast mobile browser, http://en.wikipedia.org/wiki/Opera_Coast
 	 */
-	COAST(Manufacturer.OPERA, null, 500, "Opera", new String[] { " Coast/" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, "Coast\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
-	COAST1(Manufacturer.OPERA, Browser.COAST, 501, "Opera", new String[] { " Coast/1." }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, "Coast\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
+	COAST(Manufacturer.OPERA, null, 500, "Opera", new String[] { " Coast/" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, "Coast/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
+	COAST1(Manufacturer.OPERA, Browser.COAST, 501, "Opera", new String[] { " Coast/1." }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, "Coast/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
 
-	OPERA(Manufacturer.OPERA, null, 1, "Opera", new String[] { " OPR/", "Opera" }, null, BrowserType.WEB_BROWSER, RenderingEngine.PRESTO, "Opera\\/(([\\d]+)\\.([\\w]+))"), // before MSIE
-	OPERA_MOBILE(Manufacturer.OPERA, Browser.OPERA, 100, "Opera Mobile", new String[] { "Mobile Safari", "Opera Mobi" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.BLINK, "OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"), // Another Opera for mobile devices
+	OPERA(Manufacturer.OPERA, null, 1, "Opera", new String[] { " OPR/", "Opera" }, null, BrowserType.WEB_BROWSER, RenderingEngine.PRESTO, "Opera/(([\\d]+)\\.([\\w]+))"), // before MSIE
+	OPERA_MOBILE(Manufacturer.OPERA, Browser.OPERA, 100, "Opera Mobile", new String[] { "Mobile Safari", "Opera Mobi" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.BLINK, "OPR/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"), // Another Opera for mobile devices
 	OPERA_MINI(Manufacturer.OPERA, Browser.OPERA, 2, "Opera Mini", new String[] { "Opera Mini" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.PRESTO, null), // Opera for mobile devices
-	OPERA30(Manufacturer.OPERA, Browser.OPERA, 30, "Opera 30", new String[] { "OPR/30." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
-	OPERA29(Manufacturer.OPERA, Browser.OPERA, 29, "Opera 29", new String[] { "OPR/29." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
-	OPERA28(Manufacturer.OPERA, Browser.OPERA, 28, "Opera 28", new String[] { "OPR/28." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
-	OPERA27(Manufacturer.OPERA, Browser.OPERA, 27, "Opera 27", new String[] { "OPR/27." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
-	OPERA26(Manufacturer.OPERA, Browser.OPERA, 26, "Opera 26", new String[] { "OPR/26." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
-	OPERA25(Manufacturer.OPERA, Browser.OPERA, 25, "Opera 25", new String[] { "OPR/25." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
-	OPERA24(Manufacturer.OPERA, Browser.OPERA, 24, "Opera 24", new String[] { "OPR/24." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
-	OPERA23(Manufacturer.OPERA, Browser.OPERA, 23, "Opera 23", new String[] { "OPR/23." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
-	OPERA22(Manufacturer.OPERA, Browser.OPERA, 22, "Opera 22", new String[] { "OPR/22." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
-	OPERA21(Manufacturer.OPERA, Browser.OPERA, 21, "Opera 21", new String[] { "OPR/21." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
-	OPERA20(Manufacturer.OPERA, Browser.OPERA, 20, "Opera 20", new String[] { "OPR/20." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
-	OPERA19(Manufacturer.OPERA, Browser.OPERA, 19, "Opera 19", new String[] { "OPR/19." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
-	OPERA18(Manufacturer.OPERA, Browser.OPERA, 18, "Opera 18", new String[] { "OPR/18." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
-	OPERA17(Manufacturer.OPERA, Browser.OPERA, 17, "Opera 17", new String[] { "OPR/17." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
-	OPERA16(Manufacturer.OPERA, Browser.OPERA, 16, "Opera 16", new String[] { "OPR/16." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
-	OPERA15(Manufacturer.OPERA, Browser.OPERA, 15, "Opera 15", new String[] { "OPR/15." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR\\/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
-	OPERA12(Manufacturer.OPERA, Browser.OPERA, 12, "Opera 12", new String[] { "Opera/12", "Opera 12.", "Version/12." }, null, BrowserType.WEB_BROWSER, RenderingEngine.PRESTO, "Version\\/(([\\d]+)\\.([\\w]+))"),
-	OPERA11(Manufacturer.OPERA, Browser.OPERA, 11, "Opera 11", new String[] { "Opera/11", "Opera 11.", "Version/11." }, null, BrowserType.WEB_BROWSER, RenderingEngine.PRESTO, "Version\\/(([\\d]+)\\.([\\w]+))"),
-	OPERA10(Manufacturer.OPERA, Browser.OPERA, 10, "Opera 10", new String[] { "Opera/9.8" }, new String[] { "Version/11.", "Version/12." }, BrowserType.WEB_BROWSER, RenderingEngine.PRESTO, "Version\\/(([\\d]+)\\.([\\w]+))"),
+	OPERA34(Manufacturer.OPERA, Browser.OPERA, 34, "Opera 34", new String[] { "OPR/34." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
+	OPERA33(Manufacturer.OPERA, Browser.OPERA, 33, "Opera 33", new String[] { "OPR/33." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
+	OPERA32(Manufacturer.OPERA, Browser.OPERA, 32, "Opera 32", new String[] { "OPR/33." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
+	OPERA31(Manufacturer.OPERA, Browser.OPERA, 31, "Opera 31", new String[] { "OPR/31." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
+	OPERA30(Manufacturer.OPERA, Browser.OPERA, 30, "Opera 30", new String[] { "OPR/30." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
+	OPERA29(Manufacturer.OPERA, Browser.OPERA, 29, "Opera 29", new String[] { "OPR/29." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
+	OPERA28(Manufacturer.OPERA, Browser.OPERA, 28, "Opera 28", new String[] { "OPR/28." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
+	OPERA27(Manufacturer.OPERA, Browser.OPERA, 27, "Opera 27", new String[] { "OPR/27." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
+	OPERA26(Manufacturer.OPERA, Browser.OPERA, 26, "Opera 26", new String[] { "OPR/26." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
+	OPERA25(Manufacturer.OPERA, Browser.OPERA, 25, "Opera 25", new String[] { "OPR/25." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
+	OPERA24(Manufacturer.OPERA, Browser.OPERA, 24, "Opera 24", new String[] { "OPR/24." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
+	OPERA23(Manufacturer.OPERA, Browser.OPERA, 23, "Opera 23", new String[] { "OPR/23." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
+	OPERA22(Manufacturer.OPERA, Browser.OPERA, 22, "Opera 22", new String[] { "OPR/22." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
+	OPERA21(Manufacturer.OPERA, Browser.OPERA, 21, "Opera 21", new String[] { "OPR/21." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
+	OPERA20(Manufacturer.OPERA, Browser.OPERA, 20, "Opera 20", new String[] { "OPR/20." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
+	OPERA19(Manufacturer.OPERA, Browser.OPERA, 19, "Opera 19", new String[] { "OPR/19." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
+	OPERA18(Manufacturer.OPERA, Browser.OPERA, 18, "Opera 18", new String[] { "OPR/18." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
+	OPERA17(Manufacturer.OPERA, Browser.OPERA, 17, "Opera 17", new String[] { "OPR/17." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
+	OPERA16(Manufacturer.OPERA, Browser.OPERA, 16, "Opera 16", new String[] { "OPR/16." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
+	OPERA15(Manufacturer.OPERA, Browser.OPERA, 15, "Opera 15", new String[] { "OPR/15." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
+	OPERA12(Manufacturer.OPERA, Browser.OPERA, 12, "Opera 12", new String[] { "Opera/12", "Opera 12.", "Version/12." }, null, BrowserType.WEB_BROWSER, RenderingEngine.PRESTO, "Version/(([\\d]+)\\.([\\w]+))"),
+	OPERA11(Manufacturer.OPERA, Browser.OPERA, 11, "Opera 11", new String[] { "Opera/11", "Opera 11.", "Version/11." }, null, BrowserType.WEB_BROWSER, RenderingEngine.PRESTO, "Version/(([\\d]+)\\.([\\w]+))"),
+	OPERA10(Manufacturer.OPERA, Browser.OPERA, 10, "Opera 10", new String[] { "Opera/9.8" }, new String[] { "Version/11.", "Version/12." }, BrowserType.WEB_BROWSER, RenderingEngine.PRESTO, "Version/(([\\d]+)\\.([\\w]+))"),
 	OPERA9(Manufacturer.OPERA, Browser.OPERA, 5, "Opera 9", new String[] { "Opera/9" }, null, BrowserType.WEB_BROWSER, RenderingEngine.PRESTO, null),
-	KONQUEROR(Manufacturer.OTHER, null, 1, "Konqueror", new String[] { "Konqueror" }, new String[] { "Exabot" }, BrowserType.WEB_BROWSER, RenderingEngine.KHTML, "Konqueror\\/(([0-9]+)\\.?([\\w]+)?(-[\\w]+)?)"),
+	KONQUEROR(Manufacturer.OTHER, null, 1, "Konqueror", new String[] { "Konqueror" }, new String[] { "Exabot" }, BrowserType.WEB_BROWSER, RenderingEngine.KHTML, "Konqueror/(([0-9]+)\\.?([\\w]+)?(-[\\w]+)?)"),
 
 	DOLFIN2(Manufacturer.SAMSUNG, null, 1, "Samsung Dolphin 2", new String[] { "Dolfin/2" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, null), // webkit based browser for the bada os
 
@@ -209,14 +213,14 @@ public enum Browser {
 	APPLE_APPSTORE(Manufacturer.APPLE, Browser.APPLE_WEB_KIT, 53, "App Store", new String[] { "MacAppStore" }, null, BrowserType.APP, RenderingEngine.WEBKIT, null), // Microsoft Entrourage/Outlook 2010 also only identifies itself as AppleWebKit
 	ADOBE_AIR(Manufacturer.ADOBE, Browser.APPLE_WEB_KIT, 1, "Adobe AIR application", new String[] { "AdobeAIR" }, null, BrowserType.APP, RenderingEngine.WEBKIT, null), // Microsoft Entrourage/Outlook 2010 also only identifies itself as AppleWebKit
 
-	LOTUS_NOTES(Manufacturer.OTHER, null, 3, "Lotus Notes", new String[] { "Lotus-Notes" }, null, BrowserType.EMAIL_CLIENT, RenderingEngine.OTHER, "Lotus-Notes\\/(([\\d]+)\\.([\\w]+))"), // before Mozilla
+	LOTUS_NOTES(Manufacturer.OTHER, null, 3, "Lotus Notes", new String[] { "Lotus-Notes" }, null, BrowserType.EMAIL_CLIENT, RenderingEngine.OTHER, "Lotus-Notes/(([\\d]+)\\.([\\w]+))"), // before Mozilla
 
-	CAMINO(Manufacturer.OTHER, null, 5, "Camino", new String[] { "Camino" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, "Camino\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?)"), // using Gecko Engine
+	CAMINO(Manufacturer.OTHER, null, 5, "Camino", new String[] { "Camino" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, "Camino/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?)"), // using Gecko Engine
 	CAMINO2(Manufacturer.OTHER, Browser.CAMINO, 17, "Camino 2", new String[] { "Camino/2" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null), // using Gecko Engine
 
-	FLOCK(Manufacturer.OTHER, null, 4, "Flock", new String[] { "Flock" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, "Flock\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?)"),
+	FLOCK(Manufacturer.OTHER, null, 4, "Flock", new String[] { "Flock" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, "Flock/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?)"),
 
-	FIREFOX(Manufacturer.MOZILLA, null, 10, "Firefox", new String[] { "Firefox" }, new String[] { "ggpht.com", "WordPress.com mShots" }, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, "Firefox\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"), // using Gecko Engine
+	FIREFOX(Manufacturer.MOZILLA, null, 10, "Firefox", new String[] { "Firefox" }, new String[] { "ggpht.com", "WordPress.com mShots" }, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, "Firefox/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"), // using Gecko Engine
 	FIREFOX3MOBILE(Manufacturer.MOZILLA, Browser.FIREFOX, 31, "Firefox 3 Mobile", new String[] { "Firefox/3.5 Maemo" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.GECKO, null), // using Gecko Engine
 	FIREFOX_MOBILE(Manufacturer.MOZILLA, Browser.FIREFOX, 200, "Firefox Mobile", new String[] { "Mobile", "Android" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.GECKO, null), // using Gecko Engine
 	FIREFOX_MOBILE23(Manufacturer.MOZILLA, FIREFOX_MOBILE, 223, "Firefox Mobile 23", new String[] { "Firefox/23" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
@@ -266,7 +270,7 @@ public enum Browser {
 	/*
 	 * Thunderbird email client, based on the same Gecko engine Firefox is using.
 	 */
-	THUNDERBIRD(Manufacturer.MOZILLA, null, 110, "Thunderbird", new String[] { "Thunderbird" }, null, BrowserType.EMAIL_CLIENT, RenderingEngine.GECKO, "Thunderbird\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"), // using Gecko Engine
+	THUNDERBIRD(Manufacturer.MOZILLA, null, 110, "Thunderbird", new String[] { "Thunderbird" }, null, BrowserType.EMAIL_CLIENT, RenderingEngine.GECKO, "Thunderbird/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"), // using Gecko Engine
 	THUNDERBIRD12(Manufacturer.MOZILLA, Browser.THUNDERBIRD, 185, "Thunderbird 12", new String[] { "Thunderbird/12" }, null, BrowserType.EMAIL_CLIENT, RenderingEngine.GECKO, null), // using Gecko Engine
 	THUNDERBIRD11(Manufacturer.MOZILLA, Browser.THUNDERBIRD, 184, "Thunderbird 11", new String[] { "Thunderbird/11" }, null, BrowserType.EMAIL_CLIENT, RenderingEngine.GECKO, null), // using Gecko Engine
 	THUNDERBIRD10(Manufacturer.MOZILLA, Browser.THUNDERBIRD, 183, "Thunderbird 10", new String[] { "Thunderbird/10" }, null, BrowserType.EMAIL_CLIENT, RenderingEngine.GECKO, null), // using Gecko Engine
@@ -278,7 +282,7 @@ public enum Browser {
 
 	VIVALDI(Manufacturer.OTHER, null, 108338, "Vivaldi", new String[] { "Vivaldi" }, new String[] {}, BrowserType.WEB_BROWSER, RenderingEngine.BLINK, "Vivaldi/(([\\d]+).([\\d]+).([\\d]+).([\\d]+))"),
 
-	SEAMONKEY(Manufacturer.OTHER, null, 15, "SeaMonkey", new String[] { "SeaMonkey" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, "SeaMonkey\\/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?)"), // using Gecko Engine
+	SEAMONKEY(Manufacturer.OTHER, null, 15, "SeaMonkey", new String[] { "SeaMonkey" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, "SeaMonkey/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?)"), // using Gecko Engine
 
 	MOZILLA(Manufacturer.MOZILLA, null, 1, "Mozilla", new String[] { "Mozilla", "Moozilla" }, new String[] { "ggpht.com" }, BrowserType.WEB_BROWSER, RenderingEngine.OTHER, null), // rest of the mozilla browsers
 
@@ -294,7 +298,7 @@ public enum Browser {
 
 	EVOLUTION(Manufacturer.OTHER, null, 11, "Evolution", new String[] { "CamelHttpStream" }, null, BrowserType.EMAIL_CLIENT, RenderingEngine.OTHER, null), // http://www.go-evolution.org/Camel.Stream
 
-	LYNX(Manufacturer.OTHER, null, 13, "Lynx", new String[] { "Lynx" }, null, BrowserType.TEXT_BROWSER, RenderingEngine.OTHER, "Lynx\\/(([0-9]+)\\.([\\d]+)\\.?([\\w-+]+)?\\.?([\\w-+]+)?)"),
+	LYNX(Manufacturer.OTHER, null, 13, "Lynx", new String[] { "Lynx" }, null, BrowserType.TEXT_BROWSER, RenderingEngine.OTHER, "Lynx/(([0-9]+)\\.([\\d]+)\\.?([\\w-+]+)?\\.?([\\w-+]+)?)"),
 
 	DOWNLOAD(Manufacturer.OTHER, null, 16, "Downloading Tool", new String[] { "cURL", "wget", "ggpht.com", "Apache-HttpClient" }, null, BrowserType.TOOL, RenderingEngine.OTHER, null),
 
@@ -345,7 +349,7 @@ public enum Browser {
 		this.manufacturer = manufacturer;
 		this.renderingEngine = renderingEngine;
 		if (versionRegexString != null) {
-			this.versionRegEx = Pattern.compile(versionRegexString);
+			this.versionRegEx = Pattern.compile(versionRegexString, Pattern.CASE_INSENSITIVE);
 		}
 		if (this.parent == null) {
 			addTopLevelBrowser(this);

@@ -363,6 +363,10 @@ public class OperatingSystemTest {
 			"Mozilla/5.0 (Linux; Ubuntu 14.04 like Android 4.4) AppleWebKit/537.36 Chromium/35.0.1870.2 Mobile Safari/537.36 "
 	};
 
+	String[] ubuntu = {
+			"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:40.0) Gecko/20100101 Firefox/40.0"
+	};
+	
 	String[] kindle2 = {
 			"Mozilla/4.0 (compatible; Linux 2.6.22) NetFront/3.4 Kindle/2.0 (screen 600x800)"
 	};
@@ -487,6 +491,7 @@ public class OperatingSystemTest {
 		testDeviceTypes(gameconsoles, DeviceType.GAME_CONSOLE);
 		testDeviceTypes(googleTV, DeviceType.DMR);
 		testDeviceTypes(ubuntu_touch, DeviceType.MOBILE);
+		testDeviceTypes(ubuntu, DeviceType.COMPUTER);
 	}
 
 	public void testGroupRecursion() {
