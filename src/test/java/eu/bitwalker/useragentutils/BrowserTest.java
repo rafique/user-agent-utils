@@ -710,7 +710,7 @@ public class BrowserTest {
 		testAgents(firefox36, Browser.FIREFOX36);
 		testAgents(firefox3mobile, Browser.FIREFOX3MOBILE);
 		testAgents(firefoxMobile, Browser.FIREFOX_MOBILE);
-		testAgents(firefoxMobile13, Browser.FIREFOX13);
+		testAgents(firefoxMobile13, Browser.FIREFOX_MOBILE13);
 		testAgents(firefoxMobile23, Browser.FIREFOX_MOBILE23);
 		testAgents(safari, Browser.SAFARI);
 		testAgents(dolfin, Browser.DOLFIN2);

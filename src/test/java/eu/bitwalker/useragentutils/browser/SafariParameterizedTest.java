@@ -58,7 +58,7 @@ public class SafariParameterizedTest extends AbstractUserAgentParameterizedTest 
 				// mobileSafari
 				{
 						"Mozilla/5.0 (Linux; U; Android 2.1; en-us; Nexus One Build/ERD62) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17",
-						Browser.MOBILE_SAFARI, "4.0", OperatingSystem.ANDROID2 },
+						Browser.ANDROID_WEB_KIT, "4.0", OperatingSystem.ANDROID2 },
 				{
 						"Mozilla/5.0 (iPod; U; CPU iPhone OS 2_0 like Mac OS X; de-de) AppleWebKit/525.18.1 (KHTML, like Gecko) Version/3.1.1 Mobile/5A347 Safari/525.20",
 						Browser.MOBILE_SAFARI, "3.1.1", OperatingSystem.MAC_OS_X_IPHONE },
@@ -67,16 +67,16 @@ public class SafariParameterizedTest extends AbstractUserAgentParameterizedTest 
 						Browser.MOBILE_SAFARI, "3.0", OperatingSystem.MAC_OS_X_IPOD },
 				{
 						"Mozilla/5.0 (iPad; U; CPU OS 3_2 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Version/4.0.4 Mobile/7B367 Safari/531.21.10",
-						Browser.MOBILE_SAFARI, "4.0.4", OperatingSystem.MAC_OS_X_IPAD },
+						Browser.MOBILE_SAFARI4, "4.0.4", OperatingSystem.MAC_OS_X_IPAD },
 				{
 						"Mozilla/5.0 (iPod; U; CPU iPhone OS 4_1 like Mac OS X; en-us) AppleWebKit/532.9 (KHTML, like Gecko) Version/4.0.5 Mobile/8B117 Safari/6531.22.7",
-						Browser.MOBILE_SAFARI, "4.0.5", OperatingSystem.iOS4_IPHONE },
+						Browser.MOBILE_SAFARI4, "4.0.5", OperatingSystem.iOS4_IPHONE },
 				{
 						"Mozilla/5.0 (iPhone; CPU iPhone OS 5_0 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3",
-						Browser.MOBILE_SAFARI, "5.1", OperatingSystem.iOS5_IPHONE },
+						Browser.MOBILE_SAFARI5, "5.1", OperatingSystem.iOS5_IPHONE },
 				{
 						"Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3",
-						Browser.MOBILE_SAFARI, "5.1", OperatingSystem.iOS5_IPHONE } 
+						Browser.MOBILE_SAFARI5, "5.1", OperatingSystem.iOS5_IPHONE } 
 			});
 	}
 }

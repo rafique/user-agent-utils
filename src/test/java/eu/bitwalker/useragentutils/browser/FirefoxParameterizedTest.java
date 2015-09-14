@@ -63,7 +63,7 @@ public class FirefoxParameterizedTest extends
 				// firefoxMobile
 				{
 						"Mozilla/5.0 (Android; Mobile; rv:13.0) Gecko/13.0 Firefox/13.0",
-						Browser.FIREFOX_MOBILE, "13.0", OperatingSystem.ANDROID_MOBILE },
+						Browser.FIREFOX_MOBILE13, "13.0", OperatingSystem.ANDROID_MOBILE },
 				// firefoxMobile23
 				{
 						"Mozilla/5.0 (Android; Mobile; rv:23.0) Gecko/23.0 Firefox/23.0",
