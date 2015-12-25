@@ -152,13 +152,14 @@ public enum OperatingSystem {
 	KINDLE3(Manufacturer.AMAZON, OperatingSystem.KINDLE, 30, "Linux (Kindle 3)", new String[] { "Kindle/3" }, null, DeviceType.TABLET, null),
 	KINDLE2(Manufacturer.AMAZON, OperatingSystem.KINDLE, 20, "Linux (Kindle 2)", new String[] { "Kindle/2" }, null, DeviceType.TABLET, null),
 	LINUX(Manufacturer.OTHER, null, 2, "Linux", new String[] { "Linux", "CamelHttpStream" }, null, DeviceType.COMPUTER, null), // CamelHttpStream is being used by Evolution, an email client for Linux
+	FREE_BSD(Manufacturer.OTHER, null, 5, "FreeBSD", new String[] { "FreeBSD"}, null, DeviceType.COMPUTER, null), 
 	UBUNTU(Manufacturer.CONONICAL, OperatingSystem.LINUX, 1, "Ubuntu", new String[] { "ubuntu" }, null, DeviceType.COMPUTER, null),
 	UBUNTU_TOUCH_MOBILE(Manufacturer.CONONICAL, OperatingSystem.UBUNTU, 200, "Ubuntu Touch (mobile)", new String[] { "mobile" }, null, DeviceType.MOBILE, null),
 
 	/**
 	 * Other Symbian OS versions
 	 */
-	SYMBIAN(Manufacturer.SYMBIAN, null, 1, "Symbian OS", new String[] { "Symbian", "Series60" }, null, DeviceType.MOBILE, null),
+	SYMBIAN(Manufacturer.SYMBIAN, null, 1, "Symbian OS", new String[] { "Symbian", "Series60", "S60", "SymbOS" }, null, DeviceType.MOBILE, null),
 	/**
 	 * Symbian OS 9.x versions. Being used by Nokia (N71, N73, N81, N82, N91, N92, N95, ...)
 	 */
@@ -190,6 +191,10 @@ public enum OperatingSystem {
 	 * Nintendo Wii game console.
 	 */
 	WII(Manufacturer.NINTENDO, null, 1, "Nintendo Wii", new String[] { "Wii" }, null, DeviceType.GAME_CONSOLE, null),
+	/**
+	 * Nintendo DS came console
+	 */
+	DS(Manufacturer.NINTENDO, null, 2, "Nintendo DS", new String[] { "Nintendo DS", "Nintendo DSi", "Nintendo 3DS", "Nintendo 3DSi" }, null, DeviceType.GAME_CONSOLE, null),
 	/**
 	 * BlackBerryOS. The BlackBerryOS exists in different version. How relevant those versions are, is not clear.
 	 */
