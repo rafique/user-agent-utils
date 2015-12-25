@@ -192,7 +192,7 @@ public enum OperatingSystem {
 	 */
 	WII(Manufacturer.NINTENDO, null, 1, "Nintendo Wii", new String[] { "Wii" }, null, DeviceType.GAME_CONSOLE, null),
 	/**
-	 * Nintendo DS came console
+	 * Nintendo DS game console
 	 */
 	DS(Manufacturer.NINTENDO, null, 2, "Nintendo DS", new String[] { "Nintendo DS", "Nintendo DSi", "Nintendo 3DS", "Nintendo 3DSi" }, null, DeviceType.GAME_CONSOLE, null),
 	/**
