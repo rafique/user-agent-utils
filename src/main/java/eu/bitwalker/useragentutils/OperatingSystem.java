@@ -51,7 +51,7 @@ public enum OperatingSystem {
 	/**
 	 * Windows Mobile / Windows CE. Exact version unknown.
 	 */
-	WINDOWS(Manufacturer.MICROSOFT, null, 1, "Windows", new String[] { "Windows" }, new String[] { "Palm", "ggpht.com" }, DeviceType.COMPUTER, null), // catch the rest of older Windows systems (95, NT,...)
+	WINDOWS(Manufacturer.MICROSOFT, null, 1, "Windows", new String[] { "Windows", "Win32" }, new String[] { "Palm", "ggpht.com" }, DeviceType.COMPUTER, null), // catch the rest of older Windows systems (95, NT,...)
 	WINDOWS_10(Manufacturer.MICROSOFT, OperatingSystem.WINDOWS, 24, "Windows 10", new String[] { "Windows NT 6.4", "Windows NT 10" }, null, DeviceType.COMPUTER, null), // before Win, yes, Windows 10 is called 6.4 LOL
 	WINDOWS_81(Manufacturer.MICROSOFT, OperatingSystem.WINDOWS, 23, "Windows 8.1", new String[] { "Windows NT 6.3" }, null, DeviceType.COMPUTER, null), // before Win, yes, Windows 8.1 is called 6.3 LOL
 	WINDOWS_8(Manufacturer.MICROSOFT, OperatingSystem.WINDOWS, 22, "Windows 8", new String[] { "Windows NT 6.2" }, new String[] { "Xbox", "Xbox One" }, DeviceType.COMPUTER, null), // before Win, yes, Windows 8 is called 6.2 LOL

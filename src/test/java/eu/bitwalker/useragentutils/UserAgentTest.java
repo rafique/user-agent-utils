@@ -160,12 +160,4 @@ public class UserAgentTest {
 		UserAgent retrievedUserAgent = UserAgent.valueOf(userAgent.toString());
 		assertEquals(userAgent, retrievedUserAgent);
 	}
-
-	@Test
-	public void test() {
-		UserAgent ua = UserAgent
-				.parseUserAgentString("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko; Google Web Preview) Chrome/27.0.1453 Safari/537.36");
-		System.out.println(ua);
-	}
-
 }
