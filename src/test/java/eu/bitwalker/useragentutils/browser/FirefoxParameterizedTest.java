@@ -6,8 +6,7 @@ import java.util.Collection;
 
 import org.junit.runners.Parameterized.Parameters;
 
-import eu.bitwalker.useragentutils.Browser;
-import eu.bitwalker.useragentutils.OperatingSystem;
+import eu.bitwalker.useragentutils.*;
 
 public class FirefoxParameterizedTest extends
 		AbstractUserAgentParameterizedTest {
@@ -67,7 +66,10 @@ public class FirefoxParameterizedTest extends
 				// firefoxMobile23
 				{
 						"Mozilla/5.0 (Android; Mobile; rv:23.0) Gecko/23.0 Firefox/23.0",
-						Browser.FIREFOX_MOBILE23, "23.0", OperatingSystem.ANDROID_MOBILE } 
-			});
+						Browser.FIREFOX_MOBILE23, "23.0", OperatingSystem.ANDROID_MOBILE },
+				{
+						"Mozilla/5.0 (Windows NT 6.1; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0",
+						Browser.FIREFOX45, "45.0", OperatingSystem.WINDOWS_7 }
+		});
 	}
 }

@@ -6,8 +6,7 @@ import java.util.Collection;
 
 import org.junit.runners.Parameterized.Parameters;
 
-import eu.bitwalker.useragentutils.Browser;
-import eu.bitwalker.useragentutils.OperatingSystem;
+import eu.bitwalker.useragentutils.*;
 
 public class SafariParameterizedTest extends AbstractUserAgentParameterizedTest {
 
@@ -55,6 +54,9 @@ public class SafariParameterizedTest extends AbstractUserAgentParameterizedTest 
 				{
 						"Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_5_7; en-us) AppleWebKit/531.2+ (KHTML, like Gecko) Version/4.0.1 Safari/530.18",
 						Browser.SAFARI4, "4.0.1", OperatingSystem.MAC_OS_X },
+				{
+						"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/601.1.44 (KHTML, like Gecko) Version/9.0 Safari/601.1.44",
+						Browser.SAFARI9, "9.0", OperatingSystem.MAC_OS_X },
 				// mobileSafari
 				{
 						"Mozilla/5.0 (Linux; U; Android 2.1; en-us; Nexus One Build/ERD62) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17",
@@ -76,7 +78,11 @@ public class SafariParameterizedTest extends AbstractUserAgentParameterizedTest 
 						Browser.MOBILE_SAFARI5, "5.1", OperatingSystem.iOS5_IPHONE },
 				{
 						"Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3",
-						Browser.MOBILE_SAFARI5, "5.1", OperatingSystem.iOS5_IPHONE } 
-			});
+						Browser.MOBILE_SAFARI5, "5.1", OperatingSystem.iOS5_IPHONE },
+				{
+						"Mozilla/5.0 (iPad; CPU OS 9_0 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13A4325c Safari/601.1",
+						Browser.MOBILE_SAFARI9, "9.0", OperatingSystem.iOS9_IPAD
+				}
+		});
 	}
 }

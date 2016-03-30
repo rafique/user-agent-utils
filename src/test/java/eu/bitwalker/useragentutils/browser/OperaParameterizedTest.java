@@ -6,8 +6,7 @@ import java.util.Collection;
 
 import org.junit.runners.Parameterized.Parameters;
 
-import eu.bitwalker.useragentutils.Browser;
-import eu.bitwalker.useragentutils.OperatingSystem;
+import eu.bitwalker.useragentutils.*;
 
 public class OperaParameterizedTest extends AbstractUserAgentParameterizedTest {
 
@@ -22,10 +21,10 @@ public class OperaParameterizedTest extends AbstractUserAgentParameterizedTest {
 	public static Collection<Object[]> testData() {
 		return asList(new Object[][] {
 				// opera
-				{ "Opera/8.0 (Macintosh; PPC Mac OS X; U; en)", 
+				{ "Opera/8.0 (Macintosh; PPC Mac OS X; U; en)",
 						Browser.OPERA, "8.0", OperatingSystem.MAC_OS_X },
 				// opera9
-				{ "Opera/9.52 (Windows NT 5.1; U; en)", 
+				{ "Opera/9.52 (Windows NT 5.1; U; en)",
 						Browser.OPERA9, "9.52", OperatingSystem.WINDOWS_XP },
 				{ "Opera/9.20 (Macintosh; Intel Mac OS X; U; en)",
 						Browser.OPERA9, "9.20", OperatingSystem.MAC_OS_X },
@@ -71,7 +70,10 @@ public class OperaParameterizedTest extends AbstractUserAgentParameterizedTest {
 				// Issue #86
 				{
 						"Mozilla/5.0 (Linux; Android 4.1.2; HTC One SV Build/JZO54K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.81 Mobile Safari/537.36 OPR/28.0.1764.90386",
-						Browser.OPERA_MOBILE, "28.0.1764.90386", OperatingSystem.ANDROID4 }
+						Browser.OPERA_MOBILE, "28.0.1764.90386", OperatingSystem.ANDROID4 },
+				{
+						"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.75 Safari/537.36 OPR/36.0.2130.32",
+						Browser.OPERA36, "36.0.2130.32", OperatingSystem.WINDOWS_10 }
 
 		});
 	}
