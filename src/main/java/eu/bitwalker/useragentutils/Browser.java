@@ -242,6 +242,7 @@ public enum Browser {
 	FIREFOX_MOBILE(Manufacturer.MOZILLA, Browser.FIREFOX, 200, "Firefox Mobile", new String[] { "Mobile", "Android" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.GECKO, null), // using Gecko Engine
 	FIREFOX_MOBILE13(Manufacturer.MOZILLA, FIREFOX_MOBILE, 213, "Firefox Mobile 13", new String[] { "Firefox/13" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
 	FIREFOX_MOBILE23(Manufacturer.MOZILLA, FIREFOX_MOBILE, 223, "Firefox Mobile 23", new String[] { "Firefox/23" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+	FIREFOX46(Manufacturer.MOZILLA, Browser.FIREFOX, 460, "Firefox 46", new String[] { "Firefox/46" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null), // using Gecko Engine
 	FIREFOX45(Manufacturer.MOZILLA, Browser.FIREFOX, 450, "Firefox 45", new String[] { "Firefox/45" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null), // using Gecko Engine
 	FIREFOX44(Manufacturer.MOZILLA, Browser.FIREFOX, 440, "Firefox 44", new String[] { "Firefox/44" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null), // using Gecko Engine
 	FIREFOX43(Manufacturer.MOZILLA, Browser.FIREFOX, 430, "Firefox 43", new String[] { "Firefox/43" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null), // using Gecko Engine

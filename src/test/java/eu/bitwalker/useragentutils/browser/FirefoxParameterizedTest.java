@@ -69,7 +69,11 @@ public class FirefoxParameterizedTest extends
 						Browser.FIREFOX_MOBILE23, "23.0", OperatingSystem.ANDROID_MOBILE },
 				{
 						"Mozilla/5.0 (Windows NT 6.1; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0",
-						Browser.FIREFOX45, "45.0", OperatingSystem.WINDOWS_7 }
+						Browser.FIREFOX45, "45.0", OperatingSystem.WINDOWS_7 },
+				{
+						"Mozilla/5.0 (Windows NT 10.0; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0",
+						Browser.FIREFOX46, "46.0", OperatingSystem.WINDOWS_10
+				}
 		});
 	}
 }
