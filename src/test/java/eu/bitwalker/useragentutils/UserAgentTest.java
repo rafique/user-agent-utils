@@ -41,6 +41,11 @@ public class UserAgentTest {
 		assertEquals(OperatingSystem.WINDOWS_7, userAgent.getOperatingSystem());
 		assertEquals(Browser.OPERA28, userAgent.getBrowser());
 
+		userAgent = UserAgent
+				.parseUserAgentString("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36 OPR/37.0.2178.54");
+		assertEquals(OperatingSystem.MAC_OS_X, userAgent.getOperatingSystem());
+		assertEquals(Browser.OPERA37, userAgent.getBrowser());
+		
 		userAgent = UserAgent.parseUserAgentString("Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.36");
 		assertEquals(OperatingSystem.WINDOWS_7, userAgent.getOperatingSystem());
 		assertEquals(Browser.CHROME37, userAgent.getBrowser());
@@ -61,6 +66,10 @@ public class UserAgentTest {
 		assertEquals(OperatingSystem.WINDOWS_7, userAgent.getOperatingSystem());
 		assertEquals(Browser.CHROME42, userAgent.getBrowser());
 
+		userAgent = UserAgent.parseUserAgentString("Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36");
+		assertEquals(OperatingSystem.WINDOWS_10, userAgent.getOperatingSystem());
+		assertEquals(Browser.CHROME51, userAgent.getBrowser());
+		
 		userAgent = UserAgent
 				.parseUserAgentString("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.75.14 (KHTML, like Gecko) Version/7.0.3 Safari/7046A194A");
 		assertEquals(OperatingSystem.MAC_OS_X, userAgent.getOperatingSystem());
@@ -79,6 +88,10 @@ public class UserAgentTest {
 		assertEquals(OperatingSystem.WINDOWS_81, userAgent.getOperatingSystem());
 		assertEquals(Browser.FIREFOX36, userAgent.getBrowser());
 
+		userAgent = UserAgent.parseUserAgentString("Mozilla/5.0 (Windows NT 10.0; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0");
+		assertEquals(OperatingSystem.WINDOWS_10, userAgent.getOperatingSystem());
+		assertEquals(Browser.FIREFOX47, userAgent.getBrowser());
+		
 		userAgent = UserAgent.parseUserAgentString(
 				"Mozilla/5.0 (Linux; U; Android 2.3.3; en-us; HTC_DesireS_S510e Build/GRI40) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile");
 		assertEquals(OperatingSystem.ANDROID2, userAgent.getOperatingSystem());
