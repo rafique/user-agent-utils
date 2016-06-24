@@ -42,9 +42,9 @@ public class UserAgentTest {
 		assertEquals(Browser.OPERA28, userAgent.getBrowser());
 
 		userAgent = UserAgent
-				.parseUserAgentString("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36 OPR/37.0.2178.54");
+				.parseUserAgentString("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.84 Safari/537.36 OPR/38.0.2220.31");
 		assertEquals(OperatingSystem.MAC_OS_X, userAgent.getOperatingSystem());
-		assertEquals(Browser.OPERA37, userAgent.getBrowser());
+		assertEquals(Browser.OPERA38, userAgent.getBrowser());
 		
 		userAgent = UserAgent.parseUserAgentString("Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.36");
 		assertEquals(OperatingSystem.WINDOWS_7, userAgent.getOperatingSystem());
