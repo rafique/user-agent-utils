@@ -54,7 +54,7 @@ public enum Browser {
 	/**
 	 * Bots
 	 */
-	BOT(Manufacturer.OTHER, null, 12, "Robot/Spider", new String[] { "Googlebot", "Mediapartners-Google", "Web Preview", "bot", 
+	BOT(Manufacturer.OTHER, null, 12, "Robot/Spider", new String[] { "AdsBot-Google", "adbeat.com", "Googlebot", "Mediapartners-Google", "Web Preview", "bot", 
 			"Applebot", "spider", "crawler", "Feedfetcher", "Slurp", "Twiceler", "Nutch", "BecomeBot", "bingbot", "BingPreview/", "Google Web Preview", 
 			"WordPress.com mShots", "Seznam", "facebookexternalhit", "YandexMarket", "Teoma", "ThumbSniper", "Phantom.js", "Accoona-AI-Agent", 
 			"Arachmo", "B-l-i-t-z-B-O-T", "Cerberian Drtrs", "Charlotte", "Covario", "DataparkSearch",
