@@ -61,7 +61,7 @@ public enum Browser {
 			"FindLinks", "Holmes", "htdig", "ia_archiver", "ichiro", "igdeSpyder", "L.webis", "Larbin", "LinkWalker", "lwp-trivial", "mabontland",
 			"Mnogosearch", "mogimogi", "MVAClient", "NetResearchServer", "NewsGator", "NG-Search", "Nymesis", "oegp", "Pompos", "PycURL", "Qseero", "SBIder",
 			"ScoutJet", "Scrubby", "SearchSight", "semanticdiscovery",  "Snappy", "Sqworm", "StackRambler", "TinEye", "truwo", "updated", "voyager",
-			"VYU2", "webcollage", "YahooSeeker", "yoogliFetchAgent", "Zao" }, null, BrowserType.ROBOT, RenderingEngine.OTHER, null),
+			"VYU2", "webcollage", "YahooSeeker", "yoogliFetchAgent", "Zao", "yahoo-ad-monitoring" }, null, BrowserType.ROBOT, RenderingEngine.OTHER, null),
 	BOT_MOBILE(Manufacturer.OTHER, Browser.BOT, 20, "Mobil Robot/Spider", new String[] { "Googlebot-Mobile" }, null, BrowserType.ROBOT, RenderingEngine.OTHER, null),
 
 	/**
