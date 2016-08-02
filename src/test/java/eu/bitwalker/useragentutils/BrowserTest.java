@@ -348,8 +348,8 @@ public class BrowserTest {
 
 	String[] mobileSafari = {
 			"Mozilla/5.0 (iPod; U; CPU iPhone OS 2_0 like Mac OS X; de-de) AppleWebKit/525.18.1 (KHTML, like Gecko) Version/3.1.1 Mobile/5A347 Safari/525.20", // Mobile
-																																																																													// Safari
-																																																																													// 3.1.1
+			// Safari
+			// 3.1.1
 			"Mozilla/5.0 (iPod; U; CPU like Mac OS X; en) AppleWebKit/420.1 (KHTML, like Gecko) Version/3.0 Mobile/3A101a Safari/419.3" // Mobile Safari 3.0
 	};
 
