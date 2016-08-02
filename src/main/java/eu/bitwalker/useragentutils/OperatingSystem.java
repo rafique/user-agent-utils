@@ -68,6 +68,8 @@ public enum OperatingSystem {
 	XBOX_OS(Manufacturer.MICROSOFT, OperatingSystem.WINDOWS, 62, "Xbox OS", new String[] { "xbox" }, new String[] {}, DeviceType.GAME_CONSOLE, null),
 
 	ANDROID(Manufacturer.GOOGLE, null, 0, "Android", new String[] { "Android" }, new String[] { "Ubuntu" }, DeviceType.MOBILE, null),
+	ANDROID6(Manufacturer.GOOGLE, OperatingSystem.ANDROID, 6, "Android 6.x", new String[] { "Android 6", "Android-6" }, new String[] { "glass" }, DeviceType.MOBILE, null),
+	ANDROID6_TABLET(Manufacturer.GOOGLE, OperatingSystem.ANDROID6, 60, "Android 6.x Tablet", new String[] { "Android 6", "Android-6" }, new String[] { "mobile", "glass" }, DeviceType.TABLET, null),
 	ANDROID5(Manufacturer.GOOGLE, OperatingSystem.ANDROID, 5, "Android 5.x", new String[] { "Android 5", "Android-5" }, new String[] { "glass" }, DeviceType.MOBILE, null),
 	ANDROID5_TABLET(Manufacturer.GOOGLE, OperatingSystem.ANDROID5, 50, "Android 5.x Tablet", new String[] { "Android 5", "Android-5" }, new String[] { "mobile", "glass" }, DeviceType.TABLET, null),
 	ANDROID4(Manufacturer.GOOGLE, OperatingSystem.ANDROID, 4, "Android 4.x", new String[] { "Android 4", "Android-4" }, new String[] { "glass", "ubuntu" }, DeviceType.MOBILE, null),
@@ -93,14 +95,30 @@ public enum OperatingSystem {
 	/**
 	 * PalmOS, exact version unkown
 	 */
-	WEBOS(Manufacturer.HP, null, 11, "WebOS", new String[] { "webOS" }, null, DeviceType.MOBILE, null),
 	PALM(Manufacturer.HP, null, 10, "PalmOS", new String[] { "Palm" }, null, DeviceType.MOBILE, null),
+	
+	WEBOS(Manufacturer.HP, null, 11, "WebOS", new String[] { "webOS", "hp-tablet", "hpwOS" }, null, DeviceType.MOBILE, null),
+	WEBOS1(Manufacturer.HP, OperatingSystem.WEBOS, 12, "WebOS 1.0", new String[] { "webOS/1.0", "hpwOS/1.0" }, null, DeviceType.MOBILE, null),
+	WEBOS1_1(Manufacturer.HP, OperatingSystem.WEBOS, 13, "WebOS 1.1", new String[] { "webOS/1.1", "hpwOS/1.1" }, null, DeviceType.MOBILE, null),
+	WEBOS1_2(Manufacturer.HP, OperatingSystem.WEBOS, 14, "WebOS 1.2", new String[] { "webOS/1.2", "hpwOS/1.2" }, null, DeviceType.MOBILE, null),
+	WEBOS1_3(Manufacturer.HP, OperatingSystem.WEBOS, 15, "WebOS 1.3", new String[] { "webOS/1.3", "hpwOS/1.3" }, null, DeviceType.MOBILE, null),
+	WEBOS1_4(Manufacturer.HP, OperatingSystem.WEBOS, 16, "WebOS 1.4", new String[] { "webOS/1.4", "hpwOS/1.4" }, null, DeviceType.MOBILE, null),
+	WEBOS2(Manufacturer.HP, OperatingSystem.WEBOS, 17, "WebOS 2.0", new String[] { "webOS/2.0", "hpwOS/2.0"}, null, DeviceType.MOBILE, null),
+	WEBOS2_1(Manufacturer.HP, OperatingSystem.WEBOS, 18, "WebOS 2.1", new String[] { "webOS/2.1", "hpwOS/2.1" }, null, DeviceType.MOBILE, null),
+	WEBOS2_2(Manufacturer.HP, OperatingSystem.WEBOS, 19, "WebOS 2.2", new String[] { "webOS/2.2", "hpwOS/2.2" }, null, DeviceType.MOBILE, null),
+	WEBOS2_3(Manufacturer.HP, OperatingSystem.WEBOS, 20, "WebOS 2.3", new String[] { "webOS/2.3", "hpwOS/2.3" }, null, DeviceType.MOBILE, null),
+	WEBOS3(Manufacturer.HP, OperatingSystem.WEBOS, 21, "WebOS 3.0", new String[] { "webOS/3.0", "hpwOS/3.0" }, null, DeviceType.MOBILE, null),
+	
 	MEEGO(Manufacturer.NOKIA, null, 3, "MeeGo", new String[] { "MeeGo" }, null, DeviceType.MOBILE, null),
 
 	/**
 	 * iOS4, with the release of the iPhone 4, Apple renamed the OS to iOS.
 	 */
 	IOS(Manufacturer.APPLE, null, 2, "iOS", new String[] { "iPhone OS", "like Mac OS X" }, null, DeviceType.MOBILE, null), // before MAC_OS_X_IPHONE for all older versions
+	iOS10_IPHONE(Manufacturer.APPLE, OperatingSystem.IOS, 100, "iOS 10 (iPhone)", new String[] { "iPhone OS 10" }, null, DeviceType.MOBILE, null), // before MAC_OS_X_IPHONE for all older versions
+	iOS9_3_IPHONE(Manufacturer.APPLE, OperatingSystem.IOS, 93, "iOS 9.3 (iPhone)", new String[] { "iPhone OS 9_3" }, null, DeviceType.MOBILE, null), // before MAC_OS_X_IPHONE for all older versions
+	iOS9_2_IPHONE(Manufacturer.APPLE, OperatingSystem.IOS, 92, "iOS 9.2 (iPhone)", new String[] { "iPhone OS 9_2" }, null, DeviceType.MOBILE, null), // before MAC_OS_X_IPHONE for all older versions
+	iOS9_1_IPHONE(Manufacturer.APPLE, OperatingSystem.IOS, 91, "iOS 9.1 (iPhone)", new String[] { "iPhone OS 9_1" }, null, DeviceType.MOBILE, null), // before MAC_OS_X_IPHONE for all older versions
 	iOS9_IPHONE(Manufacturer.APPLE, OperatingSystem.IOS, 90, "iOS 9 (iPhone)", new String[] { "iPhone OS 9" }, null, DeviceType.MOBILE, null), // before MAC_OS_X_IPHONE for all older versions
 	iOS8_4_IPHONE(Manufacturer.APPLE, OperatingSystem.IOS, 49, "iOS 8.4 (iPhone)", new String[] { "iPhone OS 8_4" }, null, DeviceType.MOBILE, null), // before MAC_OS_X_IPHONE for all older versions
 	iOS8_3_IPHONE(Manufacturer.APPLE, OperatingSystem.IOS, 48, "iOS 8.3 (iPhone)", new String[] { "iPhone OS 8_3" }, null, DeviceType.MOBILE, null), // before MAC_OS_X_IPHONE for all older versions
@@ -112,6 +130,10 @@ public enum OperatingSystem {
 	iOS5_IPHONE(Manufacturer.APPLE, OperatingSystem.IOS, 42, "iOS 5 (iPhone)", new String[] { "iPhone OS 5" }, null, DeviceType.MOBILE, null), // before MAC_OS_X_IPHONE for all older versions
 	iOS4_IPHONE(Manufacturer.APPLE, OperatingSystem.IOS, 41, "iOS 4 (iPhone)", new String[] { "iPhone OS 4" }, null, DeviceType.MOBILE, null), // before MAC_OS_X_IPHONE for all older versions
 	MAC_OS_X_IPAD(Manufacturer.APPLE, OperatingSystem.IOS, 50, "Mac OS X (iPad)", new String[] { "iPad" }, null, DeviceType.TABLET, null), // before Mac OS X
+	iOS10_IPAD(Manufacturer.APPLE, OperatingSystem.MAC_OS_X_IPAD, 62, "iOS 10 (iPad)", new String[] { "OS 10_0" }, null, DeviceType.TABLET, null), // before Mac OS X
+	iOS9_3_IPAD(Manufacturer.APPLE, OperatingSystem.MAC_OS_X_IPAD, 61, "iOS 9.3 (iPad)", new String[] { "OS 9_3" }, null, DeviceType.TABLET, null), // before Mac OS X
+	iOS9_2_IPAD(Manufacturer.APPLE, OperatingSystem.MAC_OS_X_IPAD, 60, "iOS 9.2 (iPad)", new String[] { "OS 9_2" }, null, DeviceType.TABLET, null), // before Mac OS X
+	iOS9_1_IPAD(Manufacturer.APPLE, OperatingSystem.MAC_OS_X_IPAD, 59, "iOS 9.1 (iPad)", new String[] { "OS 9_1" }, null, DeviceType.TABLET, null), // before Mac OS X
 	iOS9_IPAD(Manufacturer.APPLE, OperatingSystem.MAC_OS_X_IPAD, 58, "iOS 9 (iPad)", new String[] { "OS 9" }, null, DeviceType.TABLET, null), // before Mac OS X
 	iOS8_4_IPAD(Manufacturer.APPLE, OperatingSystem.MAC_OS_X_IPAD, 57, "iOS 8.4 (iPad)", new String[] { "OS 8_4" }, null, DeviceType.TABLET, null), // before Mac OS X
 	iOS8_3_IPAD(Manufacturer.APPLE, OperatingSystem.MAC_OS_X_IPAD, 56, "iOS 8.3 (iPad)", new String[] { "OS 8_3" }, null, DeviceType.TABLET, null), // before Mac OS X
@@ -151,7 +173,7 @@ public enum OperatingSystem {
 	KINDLE(Manufacturer.AMAZON, null, 1, "Linux (Kindle)", new String[] { "Kindle" }, null, DeviceType.TABLET, null),
 	KINDLE3(Manufacturer.AMAZON, OperatingSystem.KINDLE, 30, "Linux (Kindle 3)", new String[] { "Kindle/3" }, null, DeviceType.TABLET, null),
 	KINDLE2(Manufacturer.AMAZON, OperatingSystem.KINDLE, 20, "Linux (Kindle 2)", new String[] { "Kindle/2" }, null, DeviceType.TABLET, null),
-	LINUX(Manufacturer.OTHER, null, 2, "Linux", new String[] { "Linux", "CamelHttpStream" }, null, DeviceType.COMPUTER, null), // CamelHttpStream is being used by Evolution, an email client for Linux
+	LINUX(Manufacturer.OTHER, null, 2, "Linux", new String[] { "Linux", "CamelHttpStream" }, new String[] {"hpwOS", "webOS"}, DeviceType.COMPUTER, null), // CamelHttpStream is being used by Evolution, an email client for Linux
 	FREE_BSD(Manufacturer.OTHER, null, 5, "FreeBSD", new String[] { "FreeBSD"}, null, DeviceType.COMPUTER, null), 
 	UBUNTU(Manufacturer.CONONICAL, OperatingSystem.LINUX, 1, "Ubuntu", new String[] { "ubuntu" }, null, DeviceType.COMPUTER, null),
 	UBUNTU_TOUCH_MOBILE(Manufacturer.CONONICAL, OperatingSystem.UBUNTU, 200, "Ubuntu Touch (mobile)", new String[] { "mobile" }, null, DeviceType.MOBILE, null),

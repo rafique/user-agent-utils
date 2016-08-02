@@ -1,25 +1,25 @@
 /*
- * Copyright (c) 2008-2014, Harald Walker (bitwalker.eu) and contributing developers  
+ * Copyright (c) 2008-2014, Harald Walker (bitwalker.eu) and contributing developers
  * All rights reserved.
- * 
+ *
  * Redistribution and use in source and binary forms, with or
  * without modification, are permitted provided that the
  * following conditions are met:
- * 
+ *
  * * Redistributions of source code must retain the above
  * copyright notice, this list of conditions and the following
  * disclaimer.
- * 
+ *
  * * Redistributions in binary form must reproduce the above
  * copyright notice, this list of conditions and the following
  * disclaimer in the documentation and/or other materials
  * provided with the distribution.
- * 
+ *
  * * Neither the name of bitwalker nor the names of its
  * contributors may be used to endorse or promote products
  * derived from this software without specific prior written
  * permission.
- * 
+ *
  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND
  * CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
  * INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
@@ -39,18 +39,13 @@ package eu.bitwalker.useragentutils;
 
 import static org.junit.Assert.*;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 import org.junit.Test;
 
-import eu.bitwalker.useragentutils.DeviceType;
-import eu.bitwalker.useragentutils.OperatingSystem;
-
 /**
  * @author harald
- * 
+ *
  */
 public class OperatingSystemTest {
 
@@ -109,9 +104,35 @@ public class OperatingSystemTest {
 			"Mozilla/4.76 (compatible; MSIE 6.0; U; Windows 95; PalmSource; PalmOS; WebPro; Tungsten Proxyless 1.1 320x320x16)"
 	};
 
-	String[] webOS = {
-			"Mozilla/5.0 (webOS/1.3; U; en-US) AppleWebKit/525.27.1 (KHTML, like Gecko) Version/1.0 Safari/525.27.1 Desktop/1.0",
+	String[] webOS_1 = {
 			"Mozilla/5.0 (webOS/1.0; U; en-US) AppleWebKit/525.27.1 (KHTML, like Gecko) Version/1.0 Safari/525.27.1 Pre/1.0"
+	};
+	String[] webOS_1_1 = {
+	};
+	String[] webOS_1_2 = {
+	};
+	String[] webOS_1_3 = {
+			"Mozilla/5.0 (webOS/1.3; U; en-US) AppleWebKit/525.27.1 (KHTML, like Gecko) Version/1.0 Safari/525.27.1 Desktop/1.0",
+			"Mozilla/5.0 (webOS/1.3; U; en-US) AppleWebKit/538.39.41 (KHTML, like Gecko) Version/1.0 Safari/538.39.41 Desktop/1.0"
+	};
+	String[] webOS_1_4 = {
+			"Mozilla/5.0 (webOS/1.4.1.1; U; en-US) AppleWebKit/532.2 (KHTML, like Gecko) Version/1.0 Safari/532.2 Pre/1.0"
+	};
+	String[] webOS_2 = {
+			"Mozilla/5.0 (hp-tablet; Linux; hpwOS/2.0; U; en-US) AppleWebKit/534.6 (KHTML, like Gecko) wOSBrowser/233.70 Safari/534.6 TouchPad/1.0"
+	};
+	String[] webOS_2_1 = {
+			"Mozilla/5.0 (Linux; webOS/2.1.2; U; xx-xx) AppleWebKit/534.6 (KHTML, like Gecko) webOSBrowser/221.11 Safari/534.6 Pre/3.0"
+	};
+	String[] webOS_2_2 = {
+			"Mozilla/5.0 (Linux; webOS/2.2.4; U; en-CA) AppleWebKit/534.6 (KHTML, like Gecko) webOSBrowser/221.56 Safari/534.6 Pre/3.0"
+	};
+	String[] webOS_2_3 = {
+	};
+	String[] webOS_3 = {
+			"Mozilla/5.0 (hp-tablet; Linux; hpwOS/3.0.2; U; de-DE) AppleWebKit/534.6 (KHTML, like Gecko) wOSBrowser/234.40.1 Safari/534.6 TouchPad/1.0",
+			"Mozilla/5.0 (hp-tablet; Linux; hpwOS/3.0.4; U; en-GB) AppleWebKit/534.6 (KHTML, like Gecko) wOSBrowser/234.76 Safari/534.6 TouchPad/1.0",
+			"Mozilla/5.0 (hp-tablet; Linux; hpwOS/3.0.0; U; en-US) AppleWebKit/534.6 (KHTML, like Gecko) wOSBrowser/233.70 Safari/534.6 TouchPad/1.0"
 	};
 
 	String[] symbian9phones = {
@@ -146,51 +167,65 @@ public class OperatingSystemTest {
 			"SonyEricssonK610i/R1CB Browser/NetFront/3.3 Profile/MIDP-2.0 Configuration/CLDC-1.1"
 	};
 
-	String[] iPhones =
-	{
+	String[] iPhones = {
 			"Mozilla/5.0 (iPhone; U; CPU like Mac OS X; nl-nl) AppleWebKit/420.1 (KHTML, like Gecko)",
 			"Mozilla/5.0 (iPhone; U; CPU like Mac OS X; en) AppleWebKit/420+ (KHTML, like Gecko)",
 			"Mozilla/5.0 (iPhone; U; CPU like Mac OS X; en) AppleWebKit/420.1 (KHTML, like Gecko) Version/3.0 Mobile/4A93 Safari/419.3"
 	};
 
-	String[] iPhone4 =
-	{
+	String[] iPhone4 = {
 			"Mozilla/5.0 (iPhone Simulator; U; CPU iPhone OS 4_0 like Mac OS X; en-us) AppleWebKit/532.9 (KHTML, like Gecko) Version/4.0.5 Mobile/8A293 Safari/6531.22.7",
 			"Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_0 like Mac OS X; en-us) AppleWebKit/532.9 (KHTML, like Gecko) Version/4.0.5 Mobile/8A293 Safari/6531.22.7",
 			"Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_1 like Mac OS X; en-us) AppleWebKit/532.9 (KHTML, like Gecko) Version/4.0.5 Mobile/8B117 Safari/6531.22.7 (compatible; Googlebot-Mobile/2.1; +http://www.google.com/bot.html)" // Google bot pretending to be an iPhone
 	};
 
-	String[] iPhone5 =
-	{
+	String[] iPhone5 = {
 			"Mozilla/5.0 (iPhone; CPU iPhone OS 5_0 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3",
 			"Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3"
 	};
 
-	String[] iPhone6 =
-	{
+	String[] iPhone6 = {
 			"Mozilla/5.0 (iPhone; CPU iPhone OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25"
 	};
 
-	String[] iPhone7 =
-	{
+	String[] iPhone7 = {
 			"Mozilla/5.0 (iPhone; CPU iPhone OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/7.0 Mobile/11A465 Safari/9537.53"
 	};
 
-	String[] iPhone8 =
-	{
+	String[] iPhone8 = {
 			"Mozilla/5.0 (iPhone; CPU iPhone OS 8_0 like Mac OS X) AppleWebKit/538.34.9 (KHTML, like Gecko) Mobile/12A4265u"
 	};
 
-	String[] iPhone8_1 =
-	{
+	String[] iPhone8_1 = {
 			"Mozilla/5.0 (iPhone; CPU iPhone OS 8_1 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12B401 Safari/600.1.4"
 	};
-	
-	String[] iPhone8_3 = 
-	{
+
+	String[] iPhone8_3 = {
 			"Mozilla/5.0 (iPhone; CPU iPhone OS 8_3 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12F70 Safari/600.1.4"
 	};
-	
+
+	String[] iPhone9 = {
+			"Mozilla/5.0 (iPhone; CPU iPhone OS 9_0_2 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13A452 [FBAN/FBIOS;FBAV/46.0.0.54.156;FBBV/18972819;FBDV/iPhone6,2;FBMD/iPhone;FBSN/iPhone OS;FBSV/9.0.2;FBSS/2; FBCR/Telekom.de;FBID/phone;FBLC/de_DE;"
+	};
+
+	String[] iPhone9_1 = {
+			"Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) FxiOS/1.4 Mobile/13B143 Safari/601.1.46",
+			"Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13B143 [FBAN/FBIOS;FBAV/47.0.0.43.396;FBBV/20481971;FBDV/iPhone8,1;FBMD/iPhone;FBSN/iPhone OS;FBSV/9.1;FBSS/2; FBCR/o2-de;FBID/phone;FBLC/de_DE;FBOP/5]",
+			"Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13B143 [FBAN/FBIOS;FBAV/47.0.0.43.396;FBBV/20481971;FBDV/iPhone6,2;FBMD/iPhone;FBSN/iPhone OS;FBSV/9.1;FBSS/2; FBCR/Telekom.de;FBID/phone;FBLC/ru_RU;FBOP"
+	};
+	String[] iPhone9_2 = {
+			"Mozilla/5.0 (iPhone; CPU iPhone OS 9_2_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13D15 [FBAN/MessengerForiOS;FBAV/52.0.0.42.75;FBBV/18946437;FBDV/iPhone6,2;FBMD/iPhone;FBSN/iPhone OS;FBSV/9.2.1;FBSS/2; FBCR/Vodafone.de;FBID/phone;FB",
+			"Mozilla/5.0 (iPhone; CPU iPhone OS 9_2_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13D15 [FBAN/FBIOS;FBAV/47.0.0.43.396;FBBV/20481971;FBDV/iPhone8,1;FBMD/iPhone;FBSN/iPhone OS;FBSV/9.2.1;FBSS/2; FBCR/Vodafone.de;FBID/phone;FBLC/de_DE;"
+	};
+	String[] iPhone9_3 = {
+			"Mozilla/5.0 (iPhone; CPU iPhone OS 9_3 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13E198 Safari/601.1",
+			"Mozilla/5.0 (iPhone; CPU iPhone OS 9_3 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) OPiOS/12.1.1.98980 Mobile/13E5191d Safari/9537.53"
+	};
+
+	String[] iPhone10 = {
+			"Mozilla/5.0 (iPhone; CPU iPhone OS 10_0 like Mac OS X) AppleWebKit/602.1.17 (KHTML, like Gecko) Version/9.0 Mobile/14A166 Safari/601.1",
+	};
+
 	String[] iPods = {
 			"Mozilla/5.0 (iPod; U; CPU like Mac OS X; nl-nl) AppleWebKit/420.1 (KHTML, like Gecko)",
 			"Mozilla/5.0 (iPod; U; CPU like Mac OS X; en) AppleWebKit/420.1 (KHTML, like Gecko)",
@@ -202,6 +237,28 @@ public class OperatingSystemTest {
 			"Mozilla/5.0 (iPad; U; CPU OS 3_2 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Version/4.0.4 Mobile/7B334b Safari/531.21.10",
 			"Mozilla/5.0 (iPad; U; CPU OS 4_2_1 like Mac OS X; ja-jp) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8C148 Safari/6533.18.5",
 			"Mozilla/5.0 (iPad; CPU OS 5_0 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3"
+	};
+
+	String[] iPadIos9 = {
+			"Mozilla/5.0 (iPad; CPU OS 9_0 like Mac OS X) AppleWebKit/601.1 (KHTML, like Gecko) CriOS/48.0.2564.87 Mobile/13A344 Safari/601.1.46",
+			"Mozilla/5.0 (iPad; CPU OS 9_0_2 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13A452 [FBAN/MessengerForiOS;FBAV/53.0.0.10.320;FBBV/20008796;FBDV/iPad4,1;FBMD/iPad;FBSN/iPhone OS;FBSV/9.0.2;FBSS/2; FBCR/;FBID/tablet;FBLC/de_DE;FBOP/1]"
+	};
+	String[] iPadIos9_1 = {
+			"Mozilla/5.0 (iPad; CPU OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1 MXiOS/4.8.4.57",
+			"Mozilla/5.0 (iPad; CPU OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13B143 [FBAN/FBIOS;FBAV/38.0.0.6.79;FBBV/14316658;FBDV/iPad2,2;FBMD/iPad;FBSN/iPhone OS;FBSV/9.1;FBSS/1; FBCR/o2-de;FBID/tablet;FBLC/de_DE;FBOP/1]"
+	};
+	String[] iPadIos9_2 = {
+			"Mozilla/5.0 (iPad; CPU OS 9_2_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13D15 [FBAN/FBIOS;FBAV/46.0.0.54.156;FBBV/18972819;FBDV/iPad4,1;FBMD/iPad;FBSN/iPhone OS;FBSV/9.2.1;FBSS/2; FBCR/;FBID/tablet;FBLC/de_DE;FBOP/1]",
+			"Mozilla/5.0 (iPad; CPU OS 9_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) CriOS/40.0.2214.61 Mobile/13C75 Safari/600.1.4",
+			"Mozilla/5.0 (iPad; CPU OS 9_2_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13D15 Safari/9537.53 Kitt/1.3.3/11"
+	};
+	String[] iPadIos9_3 = {
+			"Mozilla/5.0 (iPad; CPU OS 9_3 like Mac OS X) AppleWebKit/601.1 (KHTML, like Gecko) CriOS/48.0.2564.87 Mobile/13E5191d Safari/601.1.46",
+			"Mozilla/5.0 (iPad; CPU OS 9_3 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Coast/5.01.98770 Mobile/13E5181f Safari/7534.48.3",
+			"Mozilla/5.0 (iPad; CPU OS 9_3 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13E5181f"
+	};
+	String[] iPadIos10 = {
+			"Mozilla/5.0 (iPad; CPU OS 10_0 like Mac OS X) AppleWebKit/602.1.8 (KHTML, like Gecko) Version/9.0 Mobile/14A112 Safari/601.1"
 	};
 
 	String[] iPadIos6 = {
@@ -216,7 +273,7 @@ public class OperatingSystemTest {
 	String[] iPadIos8 = {
 			"Mozilla/5.0 (iPad; CPU OS 8_0 like Mac OS X) AppleWebKit/538.34.9 (KHTML, like Gecko) Mobile/12A4265u",
 	};
-	
+
 	String[] iPadIos8_4 = {
 			"Mozilla/5.0 (iPad; CPU OS 8_4 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12H143 Safari/600.1.4"
 	};
@@ -287,6 +344,18 @@ public class OperatingSystemTest {
 			"Mozilla/5.0 (Linux; Android 5.0; Nexus 9 Build/LRX21L) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.59 Safari/537.36" // Nexus 9
 	};
 
+	String[] android6 = {
+			"Mozilla/5.0 (Linux; Android 6.0.1; LG-D855 Build/MMB29T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.27 Mobile Safari/537.36",
+			"Mozilla/5.0 (Linux; U; Android 6.0.1; en-US; SM-T320 Build/MMB29T) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 UCBrowser/10.8.0.718 U3/0.8.0 Mobile Safari/534.30",
+			"Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/47.0.2526.100 Mobile Safari/537.36 V1_AND_SQ_4.6.1_9_YYB_D QQ/5.3.1.615 NetType/WIFI"
+	};
+
+	String[] android6_tablet = {
+			"Mozilla/5.0 (Linux; Android 6.0; SHIELD Tablet K1 Build/MRA58K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.86 YaBrowser/15.12.2.6772.01 Yowser/2.5.2 Safari/537.36",
+			"Mozilla/5.0 (Linux; Android 6.0; SHIELD Tablet K1 Build/MRA58K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.95 Safari/537.36",
+			"Mozilla/5.0 (Android 6.0.1; Tablet; rv:41.0) Gecko/41.0 Firefox/41.0"
+	};
+
 	String[] androidMobile = {
 			"Mozilla/5.0 (Android; Mobile; rv:23.0) Gecko/23.0 Firefox/23.0" // no OS version information in UA-string
 	};
@@ -345,11 +414,11 @@ public class OperatingSystemTest {
 	String[] windowsMobile8_1 = {
 			"Mozilla/5.0 (Windows Phone 8.1; ARM; Trident/7.0; Touch; rv:11.0; IEMobile/11.0; HTC; HTC6990LVW) like Gecko"
 	};
-	
+
 	String[] windows10mobile = {
 			"Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; NOKIA; Lumia 735) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.71 Mobile Safari/537.36 Edge/12.0"
 	};
-	
+
 	String[] bada = {
 			"Mozilla/5.0 (SAMSUNG; SAMSUNG-GT-S8500/S8500NEJE5; U; Bada/1.0; fr-fr) AppleWebKit/533.1 (KHTML, like Gecko) Dolfin/2.0 Mobile WVGA SMM-MMS/1.2.0 NexPlayer/3.0 profile/MIDP-2.1 configuration/CLDC-1.1 OPN-B",
 			"Mozilla/5.0 (SAMSUNG; SAMSUNG-GT-S8500/S8500XXJL2; U; Bada/1.2; de-de) AppleWebKit/533.1 (KHTML, like Gecko) Dolfin/2.2 Mobile WVGA SMM-MMS/1.2.0 OPN-B"
@@ -358,7 +427,7 @@ public class OperatingSystemTest {
 	String[] maemo = {
 			"Mozilla/5.0 (X11; U; Linux armv7l; en-US; rv:1.9.2a1pre) Gecko/20091127 Firefox/3.5 Maemo Browser 1.5.6 RX-51 N900"
 	};
-	
+
 	String[] ubuntu_touch = {
 			"Mozilla/5.0 (Linux; Ubuntu 14.04 like Android 4.4) AppleWebKit/537.36 Chromium/35.0.1870.2 Mobile Safari/537.36 "
 	};
@@ -366,7 +435,7 @@ public class OperatingSystemTest {
 	String[] ubuntu = {
 			"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:40.0) Gecko/20100101 Firefox/40.0"
 	};
-	
+
 	String[] kindle2 = {
 			"Mozilla/4.0 (compatible; Linux 2.6.22) NetFront/3.4 Kindle/2.0 (screen 600x800)"
 	};
@@ -419,7 +488,16 @@ public class OperatingSystemTest {
 		testAgents(windows98, OperatingSystem.WINDOWS_98);
 		testAgents(palmOsDevices, OperatingSystem.PALM);
 		testAgents(bada, OperatingSystem.BADA);
-		testAgents(webOS, OperatingSystem.WEBOS);
+		testAgents(webOS_1, OperatingSystem.WEBOS1);
+		testAgents(webOS_1_1, OperatingSystem.WEBOS1_1);
+		testAgents(webOS_1_2, OperatingSystem.WEBOS1_2);
+		testAgents(webOS_1_3, OperatingSystem.WEBOS1_3);
+		testAgents(webOS_1_4, OperatingSystem.WEBOS1_4);
+		testAgents(webOS_2, OperatingSystem.WEBOS2);
+		testAgents(webOS_2_1, OperatingSystem.WEBOS2_1);
+		testAgents(webOS_2_2, OperatingSystem.WEBOS2_2);
+		testAgents(webOS_2_3, OperatingSystem.WEBOS2_3);
+		testAgents(webOS_3, OperatingSystem.WEBOS3);
 		testAgents(symbian9phones, OperatingSystem.SYMBIAN9);
 		testAgents(symbian8phones, OperatingSystem.SYMBIAN8);
 		testAgents(symbian7phones, OperatingSystem.SYMBIAN7);
@@ -433,11 +511,21 @@ public class OperatingSystemTest {
 		testAgents(iPhone8, OperatingSystem.iOS8_IPHONE);
 		testAgents(iPhone8_1, OperatingSystem.iOS8_1_IPHONE);
 		testAgents(iPhone8_3, OperatingSystem.iOS8_3_IPHONE);
+		testAgents(iPhone9, OperatingSystem.iOS9_IPHONE);
+		testAgents(iPhone9_1, OperatingSystem.iOS9_1_IPHONE);
+		testAgents(iPhone9_2, OperatingSystem.iOS9_2_IPHONE);
+		testAgents(iPhone9_3, OperatingSystem.iOS9_3_IPHONE);
+		testAgents(iPhone10, OperatingSystem.iOS10_IPHONE);
 		testAgents(iPods, OperatingSystem.MAC_OS_X_IPOD);
 		testAgents(iPadIos6, OperatingSystem.iOS6_IPAD);
 		testAgents(iPadIos7, OperatingSystem.iOS7_IPAD);
 		testAgents(iPadIos8, OperatingSystem.iOS8_IPAD);
 		testAgents(iPadIos8_4, OperatingSystem.iOS8_4_IPAD);
+		testAgents(iPadIos9, OperatingSystem.iOS9_IPAD);
+		testAgents(iPadIos9_1, OperatingSystem.iOS9_1_IPAD);
+		testAgents(iPadIos9_2, OperatingSystem.iOS9_2_IPAD);
+		testAgents(iPadIos9_3, OperatingSystem.iOS9_3_IPAD);
+		testAgents(iPadIos10, OperatingSystem.iOS10_IPAD);
 		testAgents(iPad, OperatingSystem.MAC_OS_X_IPAD);
 		testAgents(blackberries, OperatingSystem.BLACKBERRY);
 		testAgents(blackberry6, OperatingSystem.BLACKBERRY6);
@@ -450,6 +538,8 @@ public class OperatingSystemTest {
 		testAgents(android4_tablet, OperatingSystem.ANDROID4_TABLET);
 		testAgents(android4_wearable, OperatingSystem.ANDROID4_WEARABLE);
 		testAgents(android5_tablet, OperatingSystem.ANDROID5_TABLET);
+		testAgents(android6, OperatingSystem.ANDROID6);
+		testAgents(android6_tablet, OperatingSystem.ANDROID6_TABLET);
 		testAgents(androidMobile, OperatingSystem.ANDROID_MOBILE);
 		testAgents(androidTablet, OperatingSystem.ANDROID_TABLET);
 		testAgents(chromeOS, OperatingSystem.CHROME_OS);
@@ -468,11 +558,13 @@ public class OperatingSystemTest {
 	@Test
 	public void testCustomUserAgentParsing() {
 		for (String agentString : android4g) {
-			assertEquals(OperatingSystem.ANDROID4, OperatingSystem.parseUserAgentString(agentString, Arrays.asList(OperatingSystem.SYMBIAN7, OperatingSystem.ANDROID)));
+			assertEquals(OperatingSystem.ANDROID4,
+					OperatingSystem.parseUserAgentString(agentString, Arrays.asList(OperatingSystem.SYMBIAN7, OperatingSystem.ANDROID)));
 		}
 		// When there is no match in the given set, return UNKNOWN
 		for (String agentString : roku) {
-			assertEquals(OperatingSystem.UNKNOWN, OperatingSystem.parseUserAgentString(agentString, Arrays.asList(OperatingSystem.SYMBIAN7, OperatingSystem.ANDROID)));
+			assertEquals(OperatingSystem.UNKNOWN,
+					OperatingSystem.parseUserAgentString(agentString, Arrays.asList(OperatingSystem.SYMBIAN7, OperatingSystem.ANDROID)));
 		}
 	}
 
@@ -507,8 +599,7 @@ public class OperatingSystemTest {
 	public void testValueOf() {
 		OperatingSystem operatingSystem = OperatingSystem.parseUserAgentString(symbian9phones[0]);
 		assertEquals(OperatingSystem.valueOf(operatingSystem.getId()), operatingSystem);
-		try
-		{
+		try {
 			operatingSystem = OperatingSystem.valueOf((short) 0);
 			fail("Should have thrown IllegalArgumentException");
 		} catch (IllegalArgumentException e) {
@@ -523,8 +614,7 @@ public class OperatingSystemTest {
 	public void testValueOfString() {
 		OperatingSystem operatingSystem = OperatingSystem.parseUserAgentString(symbian9phones[0]);
 		assertEquals(OperatingSystem.valueOf(operatingSystem.toString()), operatingSystem);
-		try
-		{
+		try {
 			operatingSystem = OperatingSystem.valueOf("illegal");
 			fail("Should have thrown IllegalArgumentException");
 		} catch (IllegalArgumentException e) {
@@ -540,26 +630,21 @@ public class OperatingSystemTest {
 
 		List<Short> retrievedIdValues = new ArrayList<Short>();
 
-		for (OperatingSystem operatingSystem : OperatingSystem.values())
-		{
+		for (OperatingSystem operatingSystem : OperatingSystem.values()) {
 			assertTrue(!retrievedIdValues.contains(operatingSystem.getId()));
 			retrievedIdValues.add(operatingSystem.getId());
 		}
 
 	}
 
-	private void testDeviceTypes(String[] agentStrings, DeviceType expectedDeviceType)
-	{
-		for (String agentString : agentStrings)
-		{
+	private void testDeviceTypes(String[] agentStrings, DeviceType expectedDeviceType) {
+		for (String agentString : agentStrings) {
 			assertEquals(expectedDeviceType, OperatingSystem.parseUserAgentString(agentString).getDeviceType());
 		}
 	}
 
-	private void testAgents(String[] agentStrings, OperatingSystem expectedOperatingSystem)
-	{
-		for (String agentString : agentStrings)
-		{
+	private void testAgents(String[] agentStrings, OperatingSystem expectedOperatingSystem) {
+		for (String agentString : agentStrings) {
 			assertEquals(expectedOperatingSystem, OperatingSystem.parseUserAgentString(agentString));
 		}
 	}
