@@ -120,6 +120,8 @@ public enum Browser {
 	CHROME(Manufacturer.GOOGLE, null, 1, "Chrome", new String[] { "Chrome", "CrMo", "CriOS" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "Chrome/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"), // before Mozilla
 	ANDROID_WEB_KIT(Manufacturer.GOOGLE, null, 2, "Android Webkit Browser", new String[] { "Android", "Build/" }, new String[] { "Windows", "Firefox", "Chrome", "Opera", "OPR/", "Web Preview", "Googlebot-Mobile" }, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, "Version/(([\\d]+)\\.([\\w]+))"), // Android WebKit also only identifies itself as AppleWebKit
 	CHROME_MOBILE(Manufacturer.GOOGLE, Browser.CHROME, 100, "Chrome Mobile", new String[] { "CrMo", "CriOS", "Mobile Safari" }, new String[] { "OPR/", "Web Preview" }, BrowserType.MOBILE_BROWSER, RenderingEngine.WEBKIT, "(?:CriOS|CrMo|Chrome)/(([0-9]+)\\.?([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
+	CHROME53(Manufacturer.GOOGLE, Browser.CHROME, 58, "Chrome 53", new String[] { "Chrome/53" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null), // before Mozilla
+	CHROME52(Manufacturer.GOOGLE, Browser.CHROME, 57, "Chrome 52", new String[] { "Chrome/52" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null), // before Mozilla
 	CHROME51(Manufacturer.GOOGLE, Browser.CHROME, 56, "Chrome 51", new String[] { "Chrome/51" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null), // before Mozilla
 	CHROME50(Manufacturer.GOOGLE, Browser.CHROME, 55, "Chrome 50", new String[] { "Chrome/50" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null), // before Mozilla
 	CHROME49(Manufacturer.GOOGLE, Browser.CHROME, 54, "Chrome 49", new String[] { "Chrome/49" }, new String[] { "OPR/", "Web Preview", "Vivaldi" }, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, null), // before Mozilla
@@ -193,6 +195,8 @@ public enum Browser {
 	OPERA(Manufacturer.OPERA, null, 1, "Opera", new String[] { " OPR/", "Opera" }, null, BrowserType.WEB_BROWSER, RenderingEngine.PRESTO, "Opera/(([\\d]+)\\.([\\w]+))"), // before MSIE
 	OPERA_MOBILE(Manufacturer.OPERA, Browser.OPERA, 100, "Opera Mobile", new String[] { "Mobile Safari", "Opera Mobi" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.BLINK, "OPR/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"), // Another Opera for mobile devices
 	OPERA_MINI(Manufacturer.OPERA, Browser.OPERA, 2, "Opera Mini", new String[] { "Opera Mini" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.PRESTO, null), // Opera for mobile devices
+	OPERA40(Manufacturer.OPERA, Browser.OPERA, 40, "Opera 40", new String[] { "OPR/40." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
+	OPERA39(Manufacturer.OPERA, Browser.OPERA, 39, "Opera 39", new String[] { "OPR/39." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
 	OPERA38(Manufacturer.OPERA, Browser.OPERA, 38, "Opera 38", new String[] { "OPR/38." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
 	OPERA37(Manufacturer.OPERA, Browser.OPERA, 37, "Opera 37", new String[] { "OPR/37." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
 	OPERA36(Manufacturer.OPERA, Browser.OPERA, 36, "Opera 36", new String[] { "OPR/36." }, null, BrowserType.WEB_BROWSER, RenderingEngine.WEBKIT, "OPR/(([\\d]+)\\.([\\w]+)?(\\.[\\w]+)?(\\.[\\w]+)?)"),
@@ -245,6 +249,8 @@ public enum Browser {
 	FIREFOX_MOBILE(Manufacturer.MOZILLA, Browser.FIREFOX, 200, "Firefox Mobile", new String[] { "Mobile", "Android" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.GECKO, null), // using Gecko Engine
 	FIREFOX_MOBILE13(Manufacturer.MOZILLA, FIREFOX_MOBILE, 213, "Firefox Mobile 13", new String[] { "Firefox/13" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
 	FIREFOX_MOBILE23(Manufacturer.MOZILLA, FIREFOX_MOBILE, 223, "Firefox Mobile 23", new String[] { "Firefox/23" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.GECKO, null ),  // using Gecko Engine
+	FIREFOX49(Manufacturer.MOZILLA, Browser.FIREFOX, 490, "Firefox 49", new String[] { "Firefox/49" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null), // using Gecko Engine
+	FIREFOX48(Manufacturer.MOZILLA, Browser.FIREFOX, 480, "Firefox 48", new String[] { "Firefox/48" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null), // using Gecko Engine
 	FIREFOX47(Manufacturer.MOZILLA, Browser.FIREFOX, 470, "Firefox 47", new String[] { "Firefox/47" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null), // using Gecko Engine
 	FIREFOX46(Manufacturer.MOZILLA, Browser.FIREFOX, 460, "Firefox 46", new String[] { "Firefox/46" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null), // using Gecko Engine
 	FIREFOX45(Manufacturer.MOZILLA, Browser.FIREFOX, 450, "Firefox 45", new String[] { "Firefox/45" }, null, BrowserType.WEB_BROWSER, RenderingEngine.GECKO, null), // using Gecko Engine
