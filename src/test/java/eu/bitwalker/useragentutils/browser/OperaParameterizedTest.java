@@ -76,7 +76,10 @@ public class OperaParameterizedTest extends AbstractUserAgentParameterizedTest {
 						Browser.OPERA36, "36.0.2130.32", OperatingSystem.WINDOWS_10 },
 				{
 						"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36 OPR/40.0.2308.81",
-						Browser.OPERA40, "40.0.2308.81", OperatingSystem.WINDOWS_10
+						Browser.OPERA40, "40.0.2308.81", OperatingSystem.WINDOWS_10 },
+				{
+						"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36 OPR/41.0.2308.81",
+						Browser.OPERA41, "41.0.2308.81", OperatingSystem.WINDOWS_10
 				}
 
 		});

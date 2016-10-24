@@ -75,7 +75,10 @@ public class FirefoxParameterizedTest extends
 						Browser.FIREFOX46, "46.0", OperatingSystem.WINDOWS_10 },
 				{
 						"Mozilla/5.0 (Windows NT 10.0; WOW64; rv:49.0) Gecko/20100101 Firefox/49.0",
-						Browser.FIREFOX49, "49.0", OperatingSystem.WINDOWS_10
+						Browser.FIREFOX49, "49.0", OperatingSystem.WINDOWS_10 },
+				{
+						"Mozilla/5.0 (Windows NT 10.0; WOW64; rv:49.0) Gecko/20100101 Firefox/50.0",
+						Browser.FIREFOX50, "50.0", OperatingSystem.WINDOWS_10
 				}
 		});
 	}
