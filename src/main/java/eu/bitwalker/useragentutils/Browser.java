@@ -97,8 +97,8 @@ public enum Browser {
 	IEMOBILE7(Manufacturer.MICROSOFT, Browser.IEMOBILE, 121, "IE Mobile 7", new String[] { "IEMobile 7", "IEMobile/7" }, new String[] { "Opera" }, BrowserType.MOBILE_BROWSER, RenderingEngine.TRIDENT, "IEMobile[\\s/](([\\d]+)\\.([\\w]+))"), // before MSIE strings
 	IEMOBILE6(Manufacturer.MICROSOFT, Browser.IEMOBILE, 120, "IE Mobile 6", new String[] { "IEMobile 6" }, new String[] { "Opera" }, BrowserType.MOBILE_BROWSER, RenderingEngine.TRIDENT, "IEMobile[\\s/](([\\d]+)\\.([\\w]+))"), // before MSIE
 	IE_XBOX(Manufacturer.MICROSOFT, Browser.IE, 360, "Xbox", new String[] { "xbox" }, new String[] {}, BrowserType.WEB_BROWSER, RenderingEngine.TRIDENT, null),
-	IE11(Manufacturer.MICROSOFT, Browser.IE, 95, "Internet Explorer 11", new String[] { "Trident/7", "IE 11." }, new String[] { "Opera" }, BrowserType.WEB_BROWSER, RenderingEngine.TRIDENT, "(?:Trident/7|IE)(?:\\.[0-9]*;)?(?:.*rv:| )(([0-9]+)\\.?([0-9]+))"), // before Mozilla
-	IE10(Manufacturer.MICROSOFT, Browser.IE, 92, "Internet Explorer 10", new String[] { "Trident/6", "MSIE 10" }, new String[] { "Opera" }, BrowserType.WEB_BROWSER, RenderingEngine.TRIDENT, null), // before MSIE
+	IE11(Manufacturer.MICROSOFT, Browser.IE, 95, "Internet Explorer 11", new String[] { "rv:11.", "IE 11." }, new String[] { "Opera" }, BrowserType.WEB_BROWSER, RenderingEngine.TRIDENT, "(?:Trident/7|IE)(?:\\.[0-9]*;)?(?:.*rv:| )(([0-9]+)\\.?([0-9]+))"), // before Mozilla
+	IE10(Manufacturer.MICROSOFT, Browser.IE, 92, "Internet Explorer 10", new String[] { "MSIE 10" }, new String[] { "Opera" }, BrowserType.WEB_BROWSER, RenderingEngine.TRIDENT, null), // before MSIE
 	IE9(Manufacturer.MICROSOFT, Browser.IE, 90, "Internet Explorer 9", new String[] { "MSIE 9" }, new String[] { "Opera" }, BrowserType.WEB_BROWSER, RenderingEngine.TRIDENT, null), // before MSIE
 	IE8(Manufacturer.MICROSOFT, Browser.IE, 80, "Internet Explorer 8", new String[] { "MSIE 8", "OptimizedIE8" }, new String[] { "Trident/6", "Opera" }, BrowserType.WEB_BROWSER, RenderingEngine.TRIDENT, null), // before MSIE
 	IE7(Manufacturer.MICROSOFT, Browser.IE, 70, "Internet Explorer 7", new String[] { "MSIE 7" }, new String[] { "OptimizedIE8", "Opera" }, BrowserType.WEB_BROWSER, RenderingEngine.TRIDENT, null), // before MSIE
@@ -109,10 +109,13 @@ public enum Browser {
 	/**
 	 * Family of Microsoft Edge browsers. Pretends to be Chrome and claims to be webkit compatible.
 	 */
-	EDGE(Manufacturer.MICROSOFT, null, 300, "Microsoft Edge", new String[] { "Edge" }, null, BrowserType.WEB_BROWSER, RenderingEngine.EDGE_HTML, "(?:Edge/((12)\\.([0-9]*)))"),
+	EDGE(Manufacturer.MICROSOFT, null, 300, "Microsoft Edge", new String[] { "Edge" }, null, BrowserType.WEB_BROWSER, RenderingEngine.EDGE_HTML, "(?:Edge/(([0-9]+)\\.([0-9]*)))"),
+	EDGE15(Manufacturer.MICROSOFT, Browser.EDGE, 306, "Microsoft Edge", new String[] { "Edge/15" }, new String[] { "Mobile" }, BrowserType.WEB_BROWSER, RenderingEngine.EDGE_HTML, "(?:Edge/((15)\\.([0-9]*)))"),
+	EDGE14(Manufacturer.MICROSOFT, Browser.EDGE, 304, "Microsoft Edge", new String[] { "Edge/14" }, new String[] { "Mobile" }, BrowserType.WEB_BROWSER, RenderingEngine.EDGE_HTML, "(?:Edge/((14)\\.([0-9]*)))"),
 	EDGE13(Manufacturer.MICROSOFT, Browser.EDGE, 303, "Microsoft Edge", new String[] { "Edge/13" }, new String[] { "Mobile" }, BrowserType.WEB_BROWSER, RenderingEngine.EDGE_HTML, "(?:Edge/((13)\\.([0-9]*)))"),
 	EDGE12(Manufacturer.MICROSOFT, Browser.EDGE, 301, "Microsoft Edge", new String[] { "Edge/12" }, new String[] { "Mobile" }, BrowserType.WEB_BROWSER, RenderingEngine.EDGE_HTML, "(?:Edge/((12)\\.([0-9]*)))"),
-	EDGE_MOBILE12(Manufacturer.MICROSOFT, Browser.EDGE, 302, "Microsoft Edge Mobile", new String[] { "Mobile Safari", "Edge/12" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.EDGE_HTML, "(?:Edge/((12)\\.([0-9]*)))"),
+	EDGE_MOBILE12(Manufacturer.MICROSOFT, Browser.EDGE, 302, "Microsoft Edge Mobile", new String[] { "Edge/12" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.EDGE_HTML, "(?:Edge/((12)\\.([0-9]*)))"),
+	EDGE_MOBILE13(Manufacturer.MICROSOFT, Browser.EDGE, 305, "Microsoft Edge Mobile", new String[] { "Edge/13" }, null, BrowserType.MOBILE_BROWSER, RenderingEngine.EDGE_HTML, "(?:Edge/((13)\\.([0-9]*)))"),
 
 	/**
 	 * Google Chrome browser
