@@ -129,7 +129,7 @@ public enum OperatingSystem {
 	iOS6_IPHONE(Manufacturer.APPLE, OperatingSystem.IOS, 43, "iOS 6 (iPhone)", new String[] { "iPhone OS 6" }, null, DeviceType.MOBILE, null), // before MAC_OS_X_IPHONE for all older versions
 	iOS5_IPHONE(Manufacturer.APPLE, OperatingSystem.IOS, 42, "iOS 5 (iPhone)", new String[] { "iPhone OS 5" }, null, DeviceType.MOBILE, null), // before MAC_OS_X_IPHONE for all older versions
 	iOS4_IPHONE(Manufacturer.APPLE, OperatingSystem.IOS, 41, "iOS 4 (iPhone)", new String[] { "iPhone OS 4" }, null, DeviceType.MOBILE, null), // before MAC_OS_X_IPHONE for all older versions
-	MAC_OS_X_IPAD(Manufacturer.APPLE, OperatingSystem.IOS, 50, "Mac OS X (iPad)", new String[] { "iPad" }, null, DeviceType.TABLET, null), // before Mac OS X
+	MAC_OS_X_IPAD(Manufacturer.APPLE, OperatingSystem.IOS, 50, "iOS (iPad)", new String[] { "iPad" }, null, DeviceType.TABLET, null), // before Mac OS X
 	iOS10_IPAD(Manufacturer.APPLE, OperatingSystem.MAC_OS_X_IPAD, 62, "iOS 10 (iPad)", new String[] { "OS 10_0" }, null, DeviceType.TABLET, null), // before Mac OS X
 	iOS9_3_IPAD(Manufacturer.APPLE, OperatingSystem.MAC_OS_X_IPAD, 61, "iOS 9.3 (iPad)", new String[] { "OS 9_3" }, null, DeviceType.TABLET, null), // before Mac OS X
 	iOS9_2_IPAD(Manufacturer.APPLE, OperatingSystem.MAC_OS_X_IPAD, 60, "iOS 9.2 (iPad)", new String[] { "OS 9_2" }, null, DeviceType.TABLET, null), // before Mac OS X
@@ -142,8 +142,8 @@ public enum OperatingSystem {
 	iOS8_IPAD(Manufacturer.APPLE, OperatingSystem.MAC_OS_X_IPAD, 53, "iOS 8 (iPad)", new String[] { "OS 8_0" }, null, DeviceType.TABLET, null), // before Mac OS X
 	iOS7_IPAD(Manufacturer.APPLE, OperatingSystem.MAC_OS_X_IPAD, 52, "iOS 7 (iPad)", new String[] { "OS 7" }, null, DeviceType.TABLET, null), // before Mac OS X
 	iOS6_IPAD(Manufacturer.APPLE, OperatingSystem.MAC_OS_X_IPAD, 51, "iOS 6 (iPad)", new String[] { "OS 6" }, null, DeviceType.TABLET, null), // before Mac OS X
-	MAC_OS_X_IPHONE(Manufacturer.APPLE, OperatingSystem.IOS, 40, "Mac OS X (iPhone)", new String[] { "iPhone" }, null, DeviceType.MOBILE, null), // before Mac OS X
-	MAC_OS_X_IPOD(Manufacturer.APPLE, OperatingSystem.IOS, 30, "Mac OS X (iPod)", new String[] { "iPod" }, null, DeviceType.MOBILE, null), // before Mac OS X
+	MAC_OS_X_IPHONE(Manufacturer.APPLE, OperatingSystem.IOS, 40, "iOS (iPhone)", new String[] { "iPhone" }, null, DeviceType.MOBILE, null), // before Mac OS X
+	MAC_OS_X_IPOD(Manufacturer.APPLE, OperatingSystem.IOS, 30, "iOS (iPod)", new String[] { "iPod" }, null, DeviceType.MOBILE, null), // before Mac OS X
 
 	MAC_OS_X(Manufacturer.APPLE, null, 10, "Mac OS X", new String[] { "Mac OS X", "CFNetwork" }, null, DeviceType.COMPUTER, null), // before Mac
 

@@ -7,7 +7,7 @@
 	<name>User-Agent-Utils</name>
 	<url>http://www.bitwalker.eu/software/user-agent-utils</url>
 	<artifactId>UserAgentUtils</artifactId>
-	<version>1.18.18</version>
+	<version>1.20.2</version>
 	<description>Utility classes to handle user-agents.</description>
 	<properties>
 		<github.global.server>github</github.global.server>
@@ -45,16 +45,27 @@
     </scm>
 
 	<distributionManagement>
-	    <repository>
-	        <id>internal.repo</id>
-	        <name>Temporary Staging Repository</name>
-	        <url>file://${project.build.directory}/mvn-repo</url>
-	    </repository>
+		<snapshotRepository>
+			<id>mig.nexus.snapshots</id>
+			<url>http://nexus.mig.kaz.com.bd/repository/maven-snapshots</url>
+		</snapshotRepository>
+		<repository>
+			<id>mig.nexus.release</id>
+			<url>http://nexus.mig.kaz.com.bd/repository/maven-release</url>
+		</repository>
 	</distributionManagement>
 
 	<build>
 		<finalName>${project.artifactId}-${project.version}</finalName>
 		<plugins>
+
+<plugin>
+    <artifactId>maven-site-plugin</artifactId>
+    <configuration>
+        <skip>true</skip>
+    </configuration>
+</plugin>
+
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.1</version>
